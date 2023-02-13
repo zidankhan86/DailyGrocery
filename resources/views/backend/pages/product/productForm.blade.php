@@ -3,48 +3,37 @@
 
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Basic form elements</h4>
-      <p class="card-description">
-        Basic form elements
-      </p>
+      <h4 class="card-title">Product Form</h4>
+
       <form class="forms-sample">
         <div class="form-group">
-          <label for="exampleInputName1">Name</label>
-          <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+          <label for="exampleInputName1">Product Name</label>
+          <input type="text" class="form-control" id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail3">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Email">
+          <label for="exampleInputEmail3">Shop Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail3" placeholder="Shop Name">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword4">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword4" placeholder="Password">
+          <label for="exampleInputPassword4">Product Image</label>
+          <input type="file" class="form-control" id="exampleInputPassword4" placeholder="Shop Image">
         </div>
         <div class="form-group">
-          <label for="exampleSelectGender">Gender</label>
-            <select class="form-control" id="exampleSelectGender">
-              <option>Male</option>
-              <option>Female</option>
-            </select>
+          <label for="exampleInputCity1">Price</label>
+          <input type="number" class="form-control" id="exampleInputCity1" placeholder="Price">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword4">Quantity</label>
+            <input type="number" class="form-control" id="exampleInputPassword4" placeholder="Quantity">
           </div>
         <div class="form-group">
-          <label>File upload</label>
-          <input type="file" name="img[]" class="file-upload-default">
-          <div class="input-group col-xs-12">
-            <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-            <span class="input-group-append">
-              <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-            </span>
+          <label for="exampleTextarea1">Product Details</label>
+          <textarea class="form-control" id="exampleTextarea1" rows="4" placeholder="Details"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword4">Product Status</label>
+            <input type="text" class="form-control" id="exampleInputPassword4" placeholder="Status">
           </div>
-        </div>
-        <div class="form-group">
-          <label for="exampleInputCity1">City</label>
-          <input type="text" class="form-control" id="exampleInputCity1" placeholder="Location">
-        </div>
-        <div class="form-group">
-          <label for="exampleTextarea1">Textarea</label>
-          <textarea class="form-control" id="exampleTextarea1" rows="4"></textarea>
-        </div>
         <button type="submit" class="btn btn-primary me-2">Submit</button>
         <button class="btn btn-light">Cancel</button>
       </form>
