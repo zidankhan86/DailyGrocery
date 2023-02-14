@@ -10,4 +10,9 @@ class ShopController extends Controller
 
         return view('backend.pages.shop.shopForm');
     }
+
+    public function shop_list(){
+
+        return view('backend.pages.shop.shopList');
+    }
 }

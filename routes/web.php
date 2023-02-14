@@ -28,3 +28,5 @@ Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.add');
+Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
+Route::get('/order/list',[ProductController::class,'order_list'])->name('order.list');

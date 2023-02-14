@@ -8,7 +8,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('shop.list') }}">
           <i class="menu-icon mdi mdi-file-document"></i>
           <span class="menu-title">MY SHOP</span>
         </a>
@@ -33,7 +33,7 @@
           </li>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{route ('order.list') }}">
           <i class="menu-icon mdi mdi-file-document"></i>
           <span class="menu-title">ORDERS</span>
         </a>

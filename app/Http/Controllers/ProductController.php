@@ -10,4 +10,7 @@ class ProductController extends Controller
 
         return view('backend.pages.product.productForm');
     }
+    public function order_list(){
+        return view('backend.pages.order.orderList');
+    }
 }
