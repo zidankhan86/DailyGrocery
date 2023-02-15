@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card-body">
-    <h4 class="card-title">ORDER LIST</h4>
+    <h4 class="card-title">SHIPPING LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>

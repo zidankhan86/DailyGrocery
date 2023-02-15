@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Customer Form</h4>
+      <h4 class="card-title">CUSTOMER FORM</h4>
 
       <form class="forms-sample">
         <div class="form-group">

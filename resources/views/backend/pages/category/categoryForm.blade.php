@@ -3,7 +3,7 @@
 
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title">Category Form</h4>
+      <h4 class="card-title">CATEGORY FORM</h4>
       <form class="forms-sample">
         <div class="form-group">
           <label for="exampleInputName1">Name</label>

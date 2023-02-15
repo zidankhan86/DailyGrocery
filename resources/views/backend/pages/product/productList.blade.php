@@ -2,34 +2,38 @@
 @section('content')
 
 <div class="card-body">
-    <h4 class="card-title">ORDER LIST</h4>
+    <a href="{{ route('product.form') }}"><button class="btn btn-primary">+ ADD PRODUCT</button></a><br><br>
+    <h4 class="card-title">PRODUCT LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>
           <tr>
             <th>
-              Order Numbers
+             ID
             </th>
             <th>
-                Delivery Fee
+                Product Name
             </th>
             <th>
-                Total
+                Shop Name
             </th>
             <th>
-                Order Date
+                Image
             </th>
             <th>
-              Deadline
-            </th>
-            <th>
+                Price
+              </th>
+              <th>
+                Quantity
+              </th>
+              <th>
+                Product Details
+              </th>
+              <th>
                 Status
               </th>
               <th>
-                Shipping Address
-              </th>
-              <th>
-                Actions
+                Action
               </th>
           </tr>
         </thead>
@@ -60,6 +64,9 @@
               </td>
               <td>
                 May 15, 2015
+              </td>
+              <td>
+                Active
               </td>
           </tr>
 

@@ -10,4 +10,8 @@ class CustomerController extends Controller
 
         return view('backend.pages.customer.customerForm');
     }
+    public function customer_list(){
+
+        return view('backend.pages.customer.customerList');
+    }
 }

@@ -2,31 +2,34 @@
 @section('content')
 
 <div class="card-body">
-    <h4 class="card-title">ORDER LIST</h4>
+    <h4 class="card-title">REFOUND LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>
           <tr>
             <th>
-              Order Numbers
+              Order Id
             </th>
             <th>
-                Delivery Fee
+                Reason
             </th>
             <th>
-                Total
+                Customer Email
             </th>
             <th>
-                Order Date
+                Amount
             </th>
             <th>
-              Deadline
+              Order Number
             </th>
             <th>
-                Status
+                Created
               </th>
               <th>
-                Shipping Address
+                Order Date
+              </th>
+              <th>
+               Status
               </th>
               <th>
                 Actions
@@ -60,6 +63,9 @@
               </td>
               <td>
                 May 15, 2015
+              </td>
+              <td>
+                Active
               </td>
           </tr>
 

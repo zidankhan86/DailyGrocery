@@ -13,4 +13,11 @@ class ProductController extends Controller
     public function order_list(){
         return view('backend.pages.order.orderList');
     }
+    public function reviews_list(){
+        return view('backend.pages.reviews.reviewsList');
+    }
+    public function product_list(){
+
+        return view('backend.pages.product.productList');
+    }
 }

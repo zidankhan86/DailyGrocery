@@ -20,7 +20,7 @@
         </a>
       </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route ('product.form') }}">
+            <a class="nav-link" href="{{route ('product.list') }}">
               <i class="menu-icon ti-package"></i>
               <span class="menu-title">PRODUCTS</span>
             </a>
@@ -39,39 +39,45 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('customer.add') }}">
+        <a class="nav-link" href="{{ route('customer.list') }}">
           <i class="menu-icon ti-user"></i>
           <span class="menu-title">CUSTOMERS</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{route ('shipping.list') }}">
           <i class="menu-icon ti-truck"></i>
           <span class="menu-title">SHIPPINGS</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
-          <i class="menu-icon ti-loop`"></i>
+        <a class="nav-link" href="{{ route('refound.list') }}">
+          <i class="menu-icon ti-loop"></i>
           <span class="menu-title">REFOUNDS</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
-          <i class="menu-icon mdi mdi-file-document"></i>
+        <a class="nav-link" href="{{ route('notice.list') }}">
+          <i class="menu-icon ti-announcement"></i>
           <span class="menu-title">NOTICE</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="">
-          <i class="menu-icon mdi mdi-file-document"></i>
+          <i class="menu-icon ti-comment-alt"></i>
           <span class="menu-title">MESSAGE</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
-          <i class="menu-icon mdi mdi-file-document"></i>
+        <a class="nav-link" href="{{route ('reviews.list') }}">
+          <i class="menu-icon ti-star"></i>
           <span class="menu-title">CUSTOMER REVIEW</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{route ('reviews.list') }}">
+          <i class="menu-icon ti-cupon"></i>
+          <span class="menu-title">CUPON</span>
         </a>
       </li>
     </ul>

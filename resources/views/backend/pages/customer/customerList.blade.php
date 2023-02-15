@@ -2,31 +2,35 @@
 @section('content')
 
 <div class="card-body">
-    <h4 class="card-title">ORDER LIST</h4>
+    <a href="{{ route('customer.form') }}"><button class="btn btn-primary">+ ADD CUSTOMER</button></a><br><br>
+    <h4 class="card-title">CUSTOMER LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>
           <tr>
             <th>
-              Order Numbers
+             ID
             </th>
             <th>
-                Delivery Fee
+                First Name
             </th>
             <th>
-                Total
+                Last Name
             </th>
             <th>
-                Order Date
+                Phone
             </th>
             <th>
-              Deadline
+                Email
             </th>
             <th>
-                Status
+                Image
               </th>
               <th>
-                Shipping Address
+                Address
+              </th>
+              <th>
+                Status
               </th>
               <th>
                 Actions
@@ -60,6 +64,9 @@
               </td>
               <td>
                 May 15, 2015
+              </td>
+              <td>
+                Active
               </td>
           </tr>
 
