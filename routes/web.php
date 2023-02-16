@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\IndexController;
@@ -25,6 +26,11 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+Route::get('/login/form',[AuthController::class,'login_form'])->name('login.form');
+Route::post('/login/process',[AuthController::class,'login_process'])->name('login.process');
+Route::get('/get/registration',[AuthController::class,'registration'])->name('get.registration');
+Route::post('registration/create',[AuthController::class],'registration_crete')->name('create.registration');
+
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
@@ -47,5 +53,7 @@ Route::get('/shipping/list',[ShippingController::class,'shipping_list'])->name('
 Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('refound.list');
 Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('reviews.list');
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
+
+
 
 

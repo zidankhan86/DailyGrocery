@@ -2,7 +2,7 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('dashboard') }}"> 
+        <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="mdi mdi-grid-large menu-icon"></i>
           <span class="menu-title">Dashboard</span>
         </a>
@@ -78,6 +78,12 @@
         <a class="nav-link" href="{{route ('reviews.list') }}">
           <i class="menu-icon ti-cupon"></i>
           <span class="menu-title">CUPON</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="">
+          <i class="menu-icon ti-cupon"></i>
+          <span class="menu-title">Logout</span>
         </a>
       </li>
     </ul>
