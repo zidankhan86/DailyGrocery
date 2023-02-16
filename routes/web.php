@@ -32,6 +32,7 @@ Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
 Route::post('/shop/store/data',[ShopController::class,'shop_store'])->name('shop.store.data');
 
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
+Route::post('/category/store/data',[CategoryController::class,'category_create'])->name('category.store.data');
 
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
 Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
