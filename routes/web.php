@@ -39,10 +39,13 @@ Route::get('product/list',[ProductController::class,'product_list'])->name('prod
 Route::post('/product/store/data',[ProductController::class,'product_create'])->name('product.store.data');
 
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.form');
+Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
+Route::post('/customer/store/data',[CustomerController::class,'customer_create'])->name('customer.store.data');
+
 Route::get('/order/list',[ProductController::class,'order_list'])->name('order.list');
 Route::get('/shipping/list',[ShippingController::class,'shipping_list'])->name('shipping.list');
 Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('refound.list');
 Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('reviews.list');
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
-Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
+
 
