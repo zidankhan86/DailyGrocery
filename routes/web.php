@@ -28,10 +28,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
+Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
+Route::post('/shop/store/data',[ShopController::class,'shop_store'])->name('shop.store.data');
+
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.form');
-Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
 Route::get('/order/list',[ProductController::class,'order_list'])->name('order.list');
 Route::get('/shipping/list',[ShippingController::class,'shipping_list'])->name('shipping.list');
 Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('refound.list');
@@ -39,3 +41,4 @@ Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('rev
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
 Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
 Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
+

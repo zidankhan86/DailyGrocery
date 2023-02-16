@@ -5,6 +5,7 @@
     <div class="card-body">
       <h4 class="card-title">CATEGORY FORM</h4>
       <form class="forms-sample">
+        @csrf
         <div class="form-group">
           <label for="exampleInputName1">Name</label>
           <input type="text" class="form-control" id="exampleInputName1" placeholder="Name">
