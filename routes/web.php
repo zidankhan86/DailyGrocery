@@ -32,13 +32,16 @@ Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
 Route::post('/shop/store/data',[ShopController::class,'shop_store'])->name('shop.store.data');
 
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
+
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
+Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
+Route::post('/product/store/data',[ProductController::class,'product_create'])->name('product.store.data');
+
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.form');
 Route::get('/order/list',[ProductController::class,'order_list'])->name('order.list');
 Route::get('/shipping/list',[ShippingController::class,'shipping_list'])->name('shipping.list');
 Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('refound.list');
 Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('reviews.list');
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
-Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
 Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
 
