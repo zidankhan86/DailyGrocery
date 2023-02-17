@@ -12,14 +12,16 @@ class ProductController extends Controller
         return view('backend.pages.product.productForm');
     }
     public function order_list(){
+
         return view('backend.pages.order.orderList');
     }
     public function reviews_list(){
         return view('backend.pages.reviews.reviewsList');
     }
     public function product_list(){
+        $productlist=Products::all();
 
-        return view('backend.pages.product.productList');
+        return view('backend.pages.product.productList',compact('productlist'));
     }
     public function product_create(Request $request){
 
