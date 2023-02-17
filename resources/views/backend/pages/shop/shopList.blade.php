@@ -19,6 +19,9 @@
               Owner Name
             </th>
             <th>
+                Phone
+              </th>
+            <th>
               Product Quntity
             </th>
             <th>
@@ -33,31 +36,39 @@
           </tr>
         </thead>
         <tbody>
+
+                  @foreach ($shoplist as $data)
+
+
           <tr>
             <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
+              {{ $data->shop_logo }}
             </td>
             <td>
-              Herman Beck
+             {{ $data->shop_name }}
             </td>
             <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+              {{ $data->owner_name }}
             </td>
             <td>
-              $ 77.99
+            .......
             </td>
             <td>
-              May 15, 2015
+             {{ $data->phone }}
             </td>
             <td>
-                May 15, 2015
+                {{ $data->quantity }}
+               </td>
+            <td>
+               <select name="" id=""> <option value=""> Active  </option>
+                <option value="">Inactive</option> </select>
               </td>
               <td>
-                May 15, 2015
+               <a href="" class="btn btn-danger">Delete</a>
               </td>
           </tr>
+
+          @endforeach
 
         </tbody>
       </table>
