@@ -38,38 +38,40 @@
           </tr>
         </thead>
         <tbody>
+            @foreach ($customerlist as $customer)
+
+
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
+            <td>
+            {{  $customer->id }}
             </td>
             <td>
-              Herman Beck
+             {{ $customer->first_name }}
             </td>
             <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+              {{ $customer->last_name  }}
             </td>
             <td>
-              $ 77.99
+              {{ $customer->phone }}
             </td>
             <td>
-              May 15, 2015
+            {{ $customer->email }}
             </td>
             <td>
-                May 15, 2015
+               {{ $customer->image }}
               </td>
               <td>
-                May 15, 2015
+                {{ $customer->address }}
               </td>
               <td>
-                May 15, 2015
+                <select name="" id=""><option value="">Active</option><option value="">Inactive</option></select>
               </td>
               <td>
-                Active
+                <a href="" class="btn btn-danger">Delete</a>
               </td>
           </tr>
 
+          @endforeach
         </tbody>
       </table>
     </div>

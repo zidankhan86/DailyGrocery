@@ -13,7 +13,9 @@ class CustomerController extends Controller
     }
     public function customer_list(){
 
-        return view('backend.pages.customer.customerList');
+        $customerlist=Customer::all();
+
+        return view('backend.pages.customer.customerList',compact('customerlist'));
     }
     public function customer_create(Request $request){
         $request->validate([
