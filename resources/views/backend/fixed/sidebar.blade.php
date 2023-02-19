@@ -81,7 +81,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{ route('login.form') }}">
           <i class="menu-icon ti-cupon"></i>
           <span class="menu-title">Logout</span>
         </a>

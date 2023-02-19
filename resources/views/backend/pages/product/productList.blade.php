@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="card-body">
-    <a href="{{ route('product.form') }}"><button class="btn btn-primary">+ ADD PRODUCT</button></a><br><br>
+    <a href="{{ route('product.form') }}"><button class="btn btn-primary btn-bg">+ ADD PRODUCT</button></a><br><br>
     <h4 class="card-title">PRODUCT LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
