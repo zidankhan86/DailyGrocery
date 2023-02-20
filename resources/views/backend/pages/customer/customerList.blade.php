@@ -74,6 +74,7 @@
           @endforeach
         </tbody>
       </table>
+      {{ $customerlist->links() }}
     </div>
   </div>
   @endsection

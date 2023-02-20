@@ -72,6 +72,7 @@
 
         </tbody>
       </table>
+      {{ $shoplist->links() }}
     </div>
   </div>
   @endsection

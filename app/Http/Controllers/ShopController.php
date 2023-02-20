@@ -43,8 +43,9 @@ class ShopController extends Controller
 }
 
     public function shop_list(){
-        $shoplist= Shop::all();
+        $shoplist= Shop::paginate(2);
 
         return view('backend.pages.shop.shopList',compact('shoplist'));
     }
+
 }
