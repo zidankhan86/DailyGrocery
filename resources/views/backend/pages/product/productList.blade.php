@@ -15,6 +15,9 @@
                 Product Name
             </th>
             <th>
+                Category Name
+            </th>
+            <th>
                 Shop Name
             </th>
             <th>
@@ -50,6 +53,9 @@
               {{ $product->product_name }}
             </td>
             <td>
+                {{ $product->categoryRelation->name }}
+              </td>
+            <td>
             {{ $product->shop_name }}
             </td>
             <td>
@@ -77,6 +83,7 @@
 
         </tbody>
       </table>
+      {{ $productlist->links() }}
     </div>
   </div>
   @endsection

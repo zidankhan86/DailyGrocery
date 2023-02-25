@@ -76,13 +76,19 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{route ('reviews.list') }}">
-          <i class="menu-icon ti-cupon"></i>
+          <i class="menu-icon mdi mdi-coin"></i>
           <span class="menu-title">CUPON</span>
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{route ('role.index') }}">
+          <i class="menu-icon mdi mdi-account-key"></i>
+          <span class="menu-title">Role</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ route('login.form') }}">
-          <i class="menu-icon ti-cupon"></i>
+          <i class="menu-icon mdi mdi-window-close"></i>
           <span class="menu-title">Logout</span>
         </a>
       </li>

@@ -12,6 +12,15 @@
           <input type="text" class="form-control" name="product_name" id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
+            <label for="exampleInputName1">Category Name</label>
+            <select class="form-control" name="category_id" id="">
+                @foreach ($categories as $data)
+
+                <option value="{{ $data->id }}">{{ $data->name}}</option>
+                @endforeach
+            </select>
+          </div>
+        <div class="form-group">
           <label for="exampleInputEmail3">Shop Name</label>
           <input type="text" class="form-control" name="shop_name" id="exampleInputEmail3" placeholder="Shop Name">
         </div>

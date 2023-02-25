@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Products;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,9 @@ class ProductController extends Controller
 {
     public function products_form(){
 
-        return view('backend.pages.product.productForm');
+        $categories=Category::all();
+
+        return view('backend.pages.product.productForm',compact('categories'));
     }
     public function order_list(){
 
@@ -19,7 +22,7 @@ class ProductController extends Controller
         return view('backend.pages.reviews.reviewsList');
     }
     public function product_list(){
-        $productlist=Products::all();
+        $productlist=Products::with('CategoryRelation')->paginate(5);
 
         return view('backend.pages.product.productList',compact('productlist'));
     }
@@ -39,6 +42,7 @@ class ProductController extends Controller
 
 'product_name'=>$request->product_name,
 'shop_name' =>$request->shop_name,
+'category_id'=>$request->category_id,
 'image'=>$request->image,
 'price'=>$request->price,
 'quantity'=>$request->quantity,
