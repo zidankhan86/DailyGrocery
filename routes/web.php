@@ -56,7 +56,6 @@ Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('rev
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
 
 Route::resource('/role',RoleController::class);
-Route::resource('/role/create',RoleController::class);
 
 
 

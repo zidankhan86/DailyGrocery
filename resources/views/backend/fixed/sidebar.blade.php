@@ -51,6 +51,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="">
+          <i class="menu-icon ti-github "></i>
+          <span class="menu-title">Brand</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ route('refound.list') }}">
           <i class="menu-icon ti-loop"></i>
           <span class="menu-title">REFOUNDS</span>

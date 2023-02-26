@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="card-body">
+    <a href="{{ route('role.create') }}"><button  class="btn btn-info">ADD ROLE</button></a>
     <h4 class="card-title">Role LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
