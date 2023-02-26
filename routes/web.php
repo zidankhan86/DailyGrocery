@@ -55,6 +55,8 @@ Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('ref
 Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('reviews.list');
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
 
+
+//How to see List of Route for only 7 method // php artisan route:list --name=role
 Route::resource('/role',RoleController::class);
 
 

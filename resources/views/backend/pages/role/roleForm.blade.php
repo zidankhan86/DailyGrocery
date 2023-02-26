@@ -4,11 +4,11 @@
 <div class="card">
     <div class="card-body">
       <h4 class="card-title">Role FORM</h4>
-      <form class="forms-sample" action="" method="post">
+      <form class="forms-sample" action="{{ route('role.store') }}" method="post">
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">Name</label>
-          <input type="text" class="form-control" name="name" id="exampleInputName1" placeholder="Name">
+          <input type="text" class="form-control" name="role_name" id="exampleInputName1" placeholder="Name">
         </div>
 
 
