@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\IndexController;
@@ -58,6 +59,7 @@ Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role
 Route::resource('/role',RoleController::class);
+Route::resource('/brand',BrandController::class);
 
 
 

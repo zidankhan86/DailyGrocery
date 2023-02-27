@@ -51,7 +51,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{route('brand.index') }}">
           <i class="menu-icon ti-github "></i>
           <span class="menu-title">Brand</span>
         </a>
@@ -93,7 +93,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('login.form') }}">
+        <a class="nav-link" href="{{ route('brand.store') }}">
           <i class="menu-icon mdi mdi-window-close"></i>
           <span class="menu-title">Logout</span>
         </a>
