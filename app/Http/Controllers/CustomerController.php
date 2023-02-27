@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CustomerController extends Controller
 {
     public function customer_form(){
 
         return view('backend.pages.customer.customerForm');
+
     }
     public function customer_list(){
 
@@ -36,6 +38,7 @@ class CustomerController extends Controller
         'address'=>$request->address
 
     ]);
+    Alert::success('Success!','Customer Added Successfully!');
     return redirect()->back();
 
     }
@@ -43,6 +46,7 @@ class CustomerController extends Controller
     $delete=Customer::find($customer_id);
     $delete->delete();
 
+    Alert::success('Success !!!', 'Customer Deleted Succesfully');
     return redirect()->route('customer.list');
 
     }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -31,6 +32,7 @@ class CategoryController extends Controller
             'parent_category'=>$request->parent_category
 
         ]);
+        Alert::success('Success!','Category Added Successfully!');
         return redirect()->back();
     }
 }
