@@ -39,4 +39,11 @@ class CustomerController extends Controller
     return redirect()->back();
 
     }
+    public function delete ($customer_id){
+    $delete=Customer::find($customer_id);
+    $delete->delete();
+
+    return redirect()->route('customer.list');
+
+    }
 }

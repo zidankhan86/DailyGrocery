@@ -67,7 +67,7 @@
                 <select name="" id=""><option value="">Active</option><option value="">Inactive</option></select>
               </td>
               <td>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a href="{{ route('customer.delete',$customer->id) }}" class="btn btn-danger">Delete</a>
               </td>
           </tr>
 
