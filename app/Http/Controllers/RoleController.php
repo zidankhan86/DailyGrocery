@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Role;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class RoleController extends Controller
 {
@@ -45,6 +46,7 @@ class RoleController extends Controller
         'status'=>$request->status,
 
          ]);
+         Alert::success('Success!','Role Added Successful!!');
          return redirect()->back();
     }
 

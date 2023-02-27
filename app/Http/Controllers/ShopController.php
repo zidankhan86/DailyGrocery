@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Shop;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ShopController extends Controller
 {
@@ -39,6 +40,7 @@ class ShopController extends Controller
         "status"=>$request->status
 
     ]);
+    Alert::success('Success!','Shop Added Successful!!');
     return redirect()->back();
 }
 
