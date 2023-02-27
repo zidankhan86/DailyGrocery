@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class RoleController extends Controller
@@ -34,7 +35,12 @@ class RoleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         Role::create([
+        'role_name'=>$request->role_name,
+        'status'=>$request->status,
+
+         ]);
+         return redirect()->back();
     }
 
     /**
