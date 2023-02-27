@@ -9,61 +9,41 @@
         <thead>
           <tr>
             <th>
-              Order Numbers
+            Role ID
             </th>
             <th>
-                Delivery Fee
+                Role Name
             </th>
             <th>
-                Total
+              Status
             </th>
             <th>
-                Order Date
+               Action
             </th>
-            <th>
-              Deadline
-            </th>
-            <th>
-                Status
-              </th>
-              <th>
-                Shipping Address
-              </th>
-              <th>
-                Actions
-              </th>
+
           </tr>
         </thead>
         <tbody>
+            @foreach ($roles as $role)
+            
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
+
+            <td>
+            {{ $role->id }}
             </td>
             <td>
-              Herman Beck
+            {{ $role->role_name }}
             </td>
             <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+             {{ $role->status }}
             </td>
             <td>
-              $ 77.99
+             <a href=""><button class="btn btn-danger">Delete</button></a>
             </td>
-            <td>
-              May 15, 2015
-            </td>
-            <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
+
           </tr>
 
+          @endforeach
         </tbody>
       </table>
     </div>
