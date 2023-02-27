@@ -36,6 +36,10 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
+     $request->validate([
+        'name'=>'required',
+     ]);
+
         Brand::create([
             'name'=>$request->name,
             'logo'=>$request->logo,
