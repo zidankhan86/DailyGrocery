@@ -3,66 +3,49 @@
 
 <div class="card-body">
     <a href="{{route ('brand.create') }}"><button  class="btn btn-info">ADD BRAND</button></a>
-    <h4 class="card-title">Role LIST</h4>
+    <h4 class="card-title">BRAND LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>
+
           <tr>
-            <th>Order Numbers </th>
+            <th>Brand ID </th>
 
 
-            <th> Order Numbers </th>
+            <th> Brand Name </th>
 
 
-            <th>  Total </th>
+            <th>  Brand Logo </th>
 
             <th>
-                Order Date
+                Action
             </th>
-            <th>
-              Deadline
-            </th>
-            <th>
-                Status
-              </th>
-              <th>
-                Shipping Address
-              </th>
-              <th>
-                Actions
-              </th>
+
           </tr>
+
         </thead>
         <tbody>
+
+            @foreach ($brands as $brand)
+
+
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
+            <td>
+            {{ $brand->id }}
             </td>
             <td>
-              Herman Beck
+             {{ $brand->name }}
             </td>
             <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
+              {{ $brand->logo }}
             </td>
             <td>
-              $ 77.99
+             <a href=""><button class="btn btn-danger">Delete</button></a>
             </td>
-            <td>
-              May 15, 2015
-            </td>
-            <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
+           
           </tr>
 
+          @endforeach
         </tbody>
       </table>
     </div>

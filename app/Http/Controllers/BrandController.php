@@ -14,7 +14,8 @@ class BrandController extends Controller
      */
     public function index()
     {
-        return view('backend.pages.brand.brandList');
+        $brands=Brand::all();
+        return view('backend.pages.brand.brandList',compact('brands'));
     }
 
     /**
