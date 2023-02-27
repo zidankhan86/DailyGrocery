@@ -47,5 +47,11 @@ class ShopController extends Controller
 
         return view('backend.pages.shop.shopList',compact('shoplist'));
     }
+    public function shop_delete($shop_id){
+    $delete=Shop::find($shop_id);
+    $delete->delete();
+    return redirect()->route('shop.list');
+
+    }
 
 }

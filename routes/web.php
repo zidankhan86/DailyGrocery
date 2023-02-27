@@ -35,9 +35,11 @@ Route::post('registration/create',[AuthController::class,'registration_create'])
 
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
+
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
 Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
 Route::post('/shop/store/data',[ShopController::class,'shop_store'])->name('shop.store.data');
+Route::get('/shop/delete/{shop_id}',[ShopController::class,'shop_delete'])->name('shop.delete');
 
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
 Route::post('/category/store/data',[CategoryController::class,'category_create'])->name('category.store.data');
