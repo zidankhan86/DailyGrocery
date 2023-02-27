@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-body">
       <h4 class="card-title">BRAND FORM</h4>
-      <form class="forms-sample" action="" method="post">
+      <form class="forms-sample" action="{{route('brand.store')}}" method="post">
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">Brand Name</label>
