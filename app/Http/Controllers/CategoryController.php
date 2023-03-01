@@ -32,7 +32,7 @@ class CategoryController extends Controller
             'parent_category'=>$request->parent_category
 
         ]);
-        Alert::success('Success!','Category Added Successfully!');
+        toastr()->success('Category Added Successfully!!');
         return redirect()->back();
     }
 }

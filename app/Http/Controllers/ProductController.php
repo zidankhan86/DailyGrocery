@@ -52,7 +52,7 @@ class ProductController extends Controller
 
 
   ]);
-  Alert::success('Success!','Product Added Successfully!');
+  toastr()->success('Product Added Successfully!!');
   return redirect()->back();
 
     }

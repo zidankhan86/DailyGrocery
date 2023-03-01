@@ -215,7 +215,6 @@
       <!-- partial -->
       <div class="main-panel">
 
-        @include('sweetalert::alert')
 
 
         @yield('content')

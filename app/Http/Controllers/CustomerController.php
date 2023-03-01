@@ -38,7 +38,7 @@ class CustomerController extends Controller
         'address'=>$request->address
 
     ]);
-    Alert::success('Success!','Customer Added Successfully!');
+    toastr()->success('Customer Added Successfully!!');
     return redirect()->back();
 
     }
@@ -46,7 +46,7 @@ class CustomerController extends Controller
     $delete=Customer::find($customer_id);
     $delete->delete();
 
-    Alert::success('Success !!!', 'Customer Deleted Succesfully');
+    toastr()->success('Customer Added Successfully!!');
     return redirect()->route('customer.list');
 
     }

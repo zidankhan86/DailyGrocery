@@ -17,6 +17,8 @@ class BrandController extends Controller
     {
         $brands=Brand::all();
         return view('backend.pages.brand.brandList',compact('brands'));
+
+        $brandList = Brand::with('CategoryRelation');
     }
 
     /**
@@ -45,7 +47,7 @@ class BrandController extends Controller
             'name'=>$request->name,
             'logo'=>$request->logo,
         ]);
-        Alert::success('Success!','Brand Added Successfully!!');
+        toastr()->success('Brand Added Successfully!!');
         return redirect()->back();
     }
 

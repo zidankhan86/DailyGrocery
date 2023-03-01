@@ -46,7 +46,7 @@ class RoleController extends Controller
         'status'=>$request->status,
 
          ]);
-         Alert::success('Success!','Role Added Successful!!');
+         toastr()->success('Role Added Successfully!!');
          return redirect()->back();
     }
 

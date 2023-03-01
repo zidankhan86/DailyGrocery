@@ -14,7 +14,7 @@ class CMM extends Command
      *
      * @var string
      */
-    protected $signature = 'make:cmm {keyword}';
+    protected $signature = 'make:cmm ';
 
     /**
      * The console command description.
@@ -30,8 +30,11 @@ class CMM extends Command
      */
     public function handle()
     {
-        $keyword = $this->argument('keyword');
-        Artisan::call('make:model',[$keyword]);
+
+        Artisan::call('make:controller');
+        Artisan::call('make:migration');
+        Artisan::call('make:model');
+
         printf('Controller Model Migration Created Successfully!');
 
 
