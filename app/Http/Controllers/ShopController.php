@@ -40,7 +40,7 @@ class ShopController extends Controller
         "status"=>$request->status
 
     ]);
-    Alert::success('Success!','Shop Added Successful!!');
+    Alert::success('Success!','Shop Added Successful !!');
     return redirect()->back();
 }
 

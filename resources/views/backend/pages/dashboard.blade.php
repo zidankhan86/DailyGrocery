@@ -37,7 +37,7 @@
                     <div>
                       <p class="statistics-title">Total Revenue</p>
                       <h3 class="rate-percentage">0 BDT</h3>
-                     
+
                     </div>
                     <div>
                       <p class="statistics-title">Total Order</p>
@@ -45,19 +45,19 @@
 
                     </div>
                     <div>
-                      <p class="statistics-title">Todays Revenue</p>
-                      <h3 class="rate-percentage">68.8</h3>
+                      <p class="statistics-title">Total Customer</p>
+                      <h3 class="rate-percentage">{{ $totalCustomer }}</h3>
 
                     </div>
                     <div class="d-none d-md-block">
                       <p class="statistics-title">Total Shop</p>
-                      <h3 class="rate-percentage">2m:35s</h3>
+                      <h3 class="rate-percentage">{{ $totalShop }}</h3>
 
                     </div>
                     <div class="d-none d-md-block">
-                      <p class="statistics-title">New Sessions</p>
-                      <h3 class="rate-percentage">68.8</h3>
-                      <p class="text-danger d-flex"><i class="mdi mdi-menu-down"></i><span>68.8</span></p>
+                      <p class="statistics-title">Total Products</p>
+                      <h3 class="rate-percentage">{{ $totalProducts }}</h3>
+
                     </div>
                     <div class="d-none d-md-block">
                       <p class="statistics-title">Avg. Time on Site</p>
