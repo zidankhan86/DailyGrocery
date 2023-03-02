@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Shop;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
+
 
 class ShopController extends Controller
 {
@@ -40,7 +40,7 @@ class ShopController extends Controller
         "status"=>$request->status
 
     ]);
-    
+
     toastr()->success('Shop Added Successfully!!');
     return redirect()->back();
 }
@@ -53,6 +53,7 @@ class ShopController extends Controller
     public function shop_delete($shop_id){
     $delete=Shop::find($shop_id);
     $delete->delete();
+    toastr()->error('Shop Delete Successfully!!');
     return redirect()->route('shop.list');
 
     }

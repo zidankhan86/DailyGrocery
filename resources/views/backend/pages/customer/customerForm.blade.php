@@ -5,7 +5,7 @@
     <div class="card-body">
       <h4 class="card-title">CUSTOMER FORM</h4>
 
-      <form class="forms-sample" action="{{route ('customer.store.data') }}" method="post">
+      <form class="forms-sample" action="{{route ('customer.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">First Name</label>

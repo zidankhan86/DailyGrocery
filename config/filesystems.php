@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('FILESYSTEM_DISK', 'local'),
+    'default' => env('FILESYSTEM_DISK', 'public'), //Ekhane Public Bole Dite Hobe
 
     /*
     |--------------------------------------------------------------------------
@@ -38,8 +38,8 @@ return [
 
         'public' => [
             'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL').'/storage',
+            'root' => public_path('/uploads'), //'app/public' er  Poriborte just ('/) etuk bole dite hobe
+            'url' => env('APP_URL').'/uploads',  //'/storage' er jaygay just '/' etuk bole dite hobe
             'visibility' => 'public',
             'throw' => false,
         ],

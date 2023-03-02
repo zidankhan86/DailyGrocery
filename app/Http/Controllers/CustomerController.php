@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Customer;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
+
 
 class CustomerController extends Controller
 {
@@ -29,12 +29,20 @@ class CustomerController extends Controller
 
 
         ]);
+        $imageName=null;
+        if ($request->hasFile('image')) {
+            $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads', $imageName);
+ }
+
+
     Customer::create([
+
         'first_name'=>$request->first_name,
         'last_name'=>$request->last_name,
         'phone'=>$request->phone,
         'email'=>$request->email,
-        'image'=>$request->image,
+        'image'=>$imageName,
         'address'=>$request->address
 
     ]);
