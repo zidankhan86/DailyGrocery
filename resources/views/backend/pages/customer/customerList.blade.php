@@ -58,7 +58,7 @@
             {{ $customer->email }}
             </td>
             <td>
-               {{ $customer->image }}
+                <img width="200px" src="{{url('/uploads/uploads/'.$customer->image)}}" alt="" srcset="">
               </td>
               <td>
                 {{ $customer->address }}

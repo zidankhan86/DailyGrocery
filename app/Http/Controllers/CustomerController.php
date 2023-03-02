@@ -20,6 +20,7 @@ class CustomerController extends Controller
         return view('backend.pages.customer.customerList',compact('customerlist'));
     }
     public function customer_create(Request $request){
+        //dd($request->all());
         $request->validate([
         'first_name'=>'required',
         'last_name'=>'required',
@@ -33,7 +34,8 @@ class CustomerController extends Controller
         if ($request->hasFile('image')) {
             $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('/uploads', $imageName);
- }
+        }
+        //dd($imageName);
 
 
     Customer::create([
