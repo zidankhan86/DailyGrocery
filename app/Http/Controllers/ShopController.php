@@ -57,5 +57,9 @@ class ShopController extends Controller
     return redirect()->route('shop.list');
 
     }
+    public function shop_Edit($shop_id){
+        $shopData = Shop::find($shop_id);
+        return view('backend.pages.shop.shopEdit',compact('shopData'));
+    }
 
 }
