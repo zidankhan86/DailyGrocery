@@ -56,4 +56,9 @@ class ProductController extends Controller
   return redirect()->back();
 
     }
+    public function products_edit($product_id){
+        $productsData = Products::find($product_id);
+        return view('backend.pages.product.productsEdit',compact('productsData'));
+
+    }
 }

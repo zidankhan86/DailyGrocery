@@ -76,7 +76,9 @@
                 {{ $product->details }}
               </td>
               <td>
-               <a href="" class="btn btn-danger">Delete</a>
+
+                <a href="{{ route('products.edit',$product->id) }}" class="btn btn-info">Edit</a>
+                <a href="" class="btn btn-danger">Delete</a>
               </td>
           </tr>
           @endforeach

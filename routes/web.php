@@ -48,6 +48,7 @@ Route::post('/category/store/data',[CategoryController::class,'category_create']
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
 Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
 Route::post('/product/store/data',[ProductController::class,'product_create'])->name('product.store.data');
+Route::get('/products/edit/{product_id}',[ProductController::class,'products_edit'])->name('products.edit');
 
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.form');
 Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
