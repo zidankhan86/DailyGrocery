@@ -52,6 +52,7 @@ Route::post('/product/store/data',[ProductController::class,'product_create'])->
 Route::get('/add/customer',[CustomerController::class,'customer_form'])->name('customer.form');
 Route::get('/customer/list',[CustomerController::class,'customer_list'])->name('customer.list');
 Route::post('/customer/store/data',[CustomerController::class,'customer_create'])->name('customer.store.data');
+Route::get('/customer/edit/{customer_id}',[CustomerController::class,'customer_edit'])->name('customer.edit');
 Route::get('/customer/delete/{customer_id}',[CustomerController::class,'delete'])->name('customer.delete');
 
 Route::get('/order/list',[ProductController::class,'order_list'])->name('order.list');

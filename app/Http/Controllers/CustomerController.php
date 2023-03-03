@@ -60,4 +60,9 @@ class CustomerController extends Controller
     return redirect()->route('customer.list');
 
     }
+    public function customer_edit($customer_id){
+        $customerData = Customer::find($customer_id);
+return view('backend.pages.customer.customerEdit',compact('customerData'));
+
+    }
 }

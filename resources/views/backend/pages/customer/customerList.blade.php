@@ -68,6 +68,7 @@
               </td>
               <td>
                 <a href="{{ route('customer.delete',$customer->id) }}" class="btn btn-danger">Delete</a>
+                <a href="{{ route('customer.edit',$customer->id) }}" class="btn btn-info">Edit</a>
               </td>
           </tr>
 
