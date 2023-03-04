@@ -63,7 +63,7 @@ class CustomerController extends Controller
     public function customer_edit($customer_id){
         $customerData = Customer::find($customer_id);
 
-return view('backend.pages.customer.customerEdit',compact('customerData'));
+ return view('backend.pages.customer.customerEdit',compact('customerData'));
 
     }
     public function customer_update(Request $request ,$customer_id){

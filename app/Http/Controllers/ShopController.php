@@ -61,5 +61,27 @@ class ShopController extends Controller
         $shopData = Shop::find($shop_id);
         return view('backend.pages.shop.shopEdit',compact('shopData'));
     }
+    public function shop_update(Request $request,$shop_id){
+    $shopUpdate = Shop::find($shop_id);
+
+    $shopUpdate->update([
+
+        "shop_logo"=>$request->shop_logo,
+        "shop_name" =>$request->shop_name,
+        "owner_name" =>$request->owner_name,
+        "gender"=>$request->gender,
+        "phone"=>$request->phone,
+        "email"=>$request->email,
+        "description"=>$request->description,
+        "status"=>$request->status
+
+
+    ]);
+    toastr()->success('Success! Shop Updated Successfully');
+    return redirect()->back();
+
+
+
+    }
 
 }

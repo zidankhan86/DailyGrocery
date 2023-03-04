@@ -5,8 +5,9 @@
     <div class="card-body">
       <h4 class="card-title">SHOP EDIT</h4>
 
-      <form class="forms-sample" action="" method="post" enctype="">
+      <form class="forms-sample" action="{{ route('shop.update',$shopData->id) }}" method="post"  enctype="">
         @csrf
+        @method('put')
         <div class="form-group">
           <label for="exampleInputName1">Shop Logo</label>
           <input type="file" class="form-control"   name="shop_logo"id="exampleInputName1" placeholder="Shop Logo">
