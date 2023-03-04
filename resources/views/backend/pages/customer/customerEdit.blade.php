@@ -5,7 +5,7 @@
     <div class="card-body">
       <h4 class="card-title">CUSTOMER EDIT</h4>
 
-      <form class="forms-sample" action="" method="post" enctype="multipart/form-data">
+      <form class="forms-sample" action="{{ route('customer.update',$customerData->id) }}" method="post" enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="form-group">
@@ -33,7 +33,7 @@
           <label for="exampleInputCity1">Address</label>
           <input type="text" class="form-control" value="{{$customerData->address}}" name="address" id="exampleInputCity1" placeholder="Location">
         </div>
-        <button type="submit" class="btn btn-primary me-2">Update</button>
+       <button type="submit" class="btn btn-primary me-2">Update</button>
         <button class="btn btn-light">Cancel</button>
       </form>
     </div>

@@ -68,9 +68,11 @@ class BrandController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($brand)
     {
-        //
+        $brandData = Brand::find($brand);
+
+        return view('backend.pages.brand.brandEdit',compact('brandData'));
     }
 
     /**
