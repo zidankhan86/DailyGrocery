@@ -46,6 +46,7 @@ Route::put('/shop/update/{shop_id}',[ShopController::class,'shop_update'])->name
 Route::get('/category/form',[CategoryController::class,'category_form'])->name('category.form');
 Route::post('/category/store/data',[CategoryController::class,'category_create'])->name('category.store.data');
 Route::get('/category/list',[CategoryController::class,'category_list'])->name('category.list');
+Route::get('/category/edit/{category_id}',[CategoryController::class,'category_edit'])->name('category.edit');
 
 
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');

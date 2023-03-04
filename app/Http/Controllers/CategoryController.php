@@ -15,7 +15,7 @@ class CategoryController extends Controller
 
     public function category_list(){
         $categories = Category::all();
-        
+
         return view('backend.pages.category.categoryList',compact('categories'));
     }
 
@@ -40,5 +40,13 @@ class CategoryController extends Controller
         ]);
         toastr()->success('Category Added Successfully!!');
         return redirect()->back();
+    }
+    public function category_edit($category_id){
+
+        $categoryData = Category::find($category_id);
+
+
+        return view('backend.pages.category.categoryEdit',compact('categoryData'));
+
     }
 }

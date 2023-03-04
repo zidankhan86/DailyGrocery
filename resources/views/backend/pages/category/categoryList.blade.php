@@ -59,7 +59,7 @@
               </td>
               <td>
                 <a href="" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
-                <a href="" class="btn btn-info">Edit</a>
+                <a href="{{ route('category.edit',$category) }}" class="btn btn-info">Edit</a>
 
               </td>
           </tr>
