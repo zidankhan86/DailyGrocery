@@ -49,4 +49,13 @@ class CategoryController extends Controller
         return view('backend.pages.category.categoryEdit',compact('categoryData'));
 
     }
+     public function category_delete($category_id){
+
+        $categoryDelete = Category::find($category_id);
+        $categoryDelete->delete();
+
+        toastr()->success('Success! Category added Successfully!!');
+        return redirect()->back();
+
+     }
 }
