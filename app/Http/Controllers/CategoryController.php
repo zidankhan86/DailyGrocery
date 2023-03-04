@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
-use RealRashid\SweetAlert\Facades\Alert;
+
 
 class CategoryController extends Controller
 {
     public function category_form(){
 
         return view('backend.pages.category.categoryForm');
+    }
+
+    public function category_list(){
+        return view('backend.pages.category.categoryList');
     }
 
     public function category_create(Request $request){

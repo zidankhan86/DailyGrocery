@@ -26,7 +26,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{route ('category.form') }}">
+            <a class="nav-link" href="{{route ('category.list') }}">
               <i class="menu-icon  ti-layout-media-overlay"></i>
               <span class="menu-title">CATEGORY</span>
             </a>
