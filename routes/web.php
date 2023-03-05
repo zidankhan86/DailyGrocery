@@ -32,6 +32,7 @@ Route::get('/login/form',[AuthController::class,'login_form'])->name('login.form
 Route::post('/login/process',[AuthController::class,'login_process'])->name('login.process');
 Route::get('/get/registration',[AuthController::class,'registration'])->name('get.registration');
 Route::post('registration/create',[AuthController::class,'registration_create'])->name('create.registration');
+Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
