@@ -65,8 +65,12 @@ class ProductController extends Controller
 
         $delete = Products::find($id);
         $delete->delete();
+        
+        toastr()->error('Success! Product Deleted Successfully!!');
 
         return redirect()->back();
+
+
 
     }
 }
