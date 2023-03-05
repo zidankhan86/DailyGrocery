@@ -61,4 +61,12 @@ class ProductController extends Controller
         return view('backend.pages.product.productsEdit',compact('productsData'));
 
     }
+    public function productDelete($id){
+
+        $delete = Products::find($id);
+        $delete->delete();
+
+        return redirect()->back();
+
+    }
 }

@@ -53,7 +53,7 @@
               {{ $product->product_name }}
             </td>
             <td>
-                {{ $product->categoryRelation->name }}
+
               </td>
             <td>
             {{ $product->shop_name }}
@@ -78,7 +78,7 @@
               <td>
 
                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-info">Edit</a>
-                <a href="" class="btn btn-danger">Delete</a>
+                <a href="{{ route('product.delete',$product->id) }}" class="btn btn-danger">Delete</a>
               </td>
           </tr>
           @endforeach
