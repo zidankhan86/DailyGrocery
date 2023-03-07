@@ -25,7 +25,7 @@
         </thead>
         <tbody>
             @foreach ($roles as $role)
-            
+
           <tr>
 
             <td>
@@ -38,7 +38,7 @@
              {{ $role->status }}
             </td>
             <td>
-             <a href=""><button class="btn btn-danger">Delete</button></a>
+             <a href="{{ route('role.edit',$role->id) }}"><button class="btn btn-danger">Edit</button></a>
             </td>
 
           </tr>
