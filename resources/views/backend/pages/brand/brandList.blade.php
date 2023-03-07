@@ -40,7 +40,7 @@
               {{ $brand->logo }}
             </td>
             <td>
-             <a href="" class="btn btn-info">Edit</a>
+             <a href="{{route('brand.edit',$brand->id)}}" class="btn btn-info">Edit</a>
              <a href=""><button class="btn btn-danger">Delete</button></a>
             </td>
 
