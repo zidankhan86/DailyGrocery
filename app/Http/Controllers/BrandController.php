@@ -84,7 +84,16 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+     $updateData = Brand::find($id);
+     $updateData->update([
+
+        'name'=>$request->name,
+        'logo'=>$request->logo,
+
+     ]);
+
+     toastr()->success('Success!! Brand Updated Successfully');
+     return redirect()->back();
     }
 
     /**
