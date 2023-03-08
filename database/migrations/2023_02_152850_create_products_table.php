@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('product_name');
-            // $table->foreignId('category_id')->references('id')->on('categories')->restrictOnDelete();
-            // $table->foreignId('category_id')->constrained('categories')->restrictOnDelete();
+            // $table->foreignId('category_id')->references('id')->on('categories')
+            // $table->foreignId('category_id')->constrained('categories')
             $table->foreignId('category_id');
             $table->string('shop_name');
             $table->string('image')->nullable();
