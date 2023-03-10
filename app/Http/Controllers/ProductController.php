@@ -58,19 +58,41 @@ class ProductController extends Controller
     }
     public function products_edit($product_id){
         $productsData = Products::find($product_id);
-        return view('backend.pages.product.productsEdit',compact('productsData'));
+        $categories = Category::all();
+        return view('backend.pages.product.productsEdit',compact('productsData','categories'));
 
     }
     public function productDelete($id){
 
         $delete = Products::find($id);
         $delete->delete();
-        
+
         toastr()->error('Success! Product Deleted Successfully!!');
 
         return redirect()->back();
 
 
 
+    }
+    public function productUpdate(Request $request,$id){
+
+
+        $productsData = Products::find($id);
+
+        $productsData->update([
+
+        'product_name'=>$request->product_name,
+        'shop_name' =>$request->shop_name,
+        'category_id'=>$request->category_id,
+        'image'=>$request->image,
+        'price'=>$request->price,
+        'quantity'=>$request->quantity,
+        'details'=>$request->details,
+        'status'=>$request->status
+
+        ]);
+
+        toastr()->success('Success! Product Updated Successfully');
+        return redirect()->back();
     }
 }

@@ -11,7 +11,6 @@ class Products extends Model
     protected $guarded=[];
 
     public function CategoryRelation(){
-        return $this->belongsTo(Category::class,'category_id','id');// Category_id holo product table er jonno r id holo category table er .
-                                                                     //category_id holo foreignId product table er jonno.
+        return $this->belongsTo(Category::class, 'category_id','id');
     }
 }

@@ -53,7 +53,7 @@
               {{ $product->product_name }}
             </td>
             <td>
-
+                {{ $product->CategoryRelation->name }}
               </td>
             <td>
             {{ $product->shop_name }}

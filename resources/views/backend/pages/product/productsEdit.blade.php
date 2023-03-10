@@ -5,15 +5,22 @@
     <div class="card-body">
       <h4 class="card-title">PRODUCT EDIT</h4>
 
-      <form class="forms-sample" action="" method="post">
+      <form class="forms-sample" action="{{ route('product.update',$productsData->id) }}" method="post">
         @csrf
+        @method('PUT')
         <div class="form-group">
           <label for="exampleInputName1">Product Name</label>
           <input type="text" class="form-control" value="{{$productsData->product_name}}" name="product_name" id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
             <label for="exampleInputName1">Category Name</label>
-            <input class="form-control" type="text" name="category_name" value="{{$productsData->category_name}}">
+            <select name="category_id" id="" class="form-control">
+                @foreach ($categories as $category)
+
+                <option value="{{ $category->id}}" {{ $category->id==$productsData->category_id ? 'selected':''}}>{{$category->name}}</option>
+
+                @endforeach
+            </select>
           </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Shop Name</label>

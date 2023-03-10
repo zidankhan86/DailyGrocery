@@ -14,9 +14,11 @@
         <div class="form-group">
             <label for="exampleInputName1">Category Name</label>
             <select class="form-control" name="category_id" id="">
-                @foreach ($categories as $data)
 
-                <option value="{{ $data->id }}">{{ $data->name}}</option>
+                @foreach ($categories as $category)
+
+                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                
                 @endforeach
             </select>
           </div>
