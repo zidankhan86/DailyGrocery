@@ -49,6 +49,7 @@ Route::post('/category/store/data',[CategoryController::class,'category_create']
 Route::get('/category/list',[CategoryController::class,'category_list'])->name('category.list');
 Route::get('/category/edit/{category_id}',[CategoryController::class,'category_edit'])->name('category.edit');
 Route::get('/category/delete/{category_id}',[CategoryController::class,'category_delete'])->name('category.delete');
+Route::put('/category/update/{id}',[CategoryController::class,'category_update'])->name('category.update');
 
 
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');

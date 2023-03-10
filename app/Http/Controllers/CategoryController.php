@@ -58,4 +58,21 @@ class CategoryController extends Controller
         return redirect()->back();
 
      }
+
+     public function category_update(Request $request,$id){
+
+        $categoryUpdate = Category::find($id);
+        $categoryUpdate->update([
+
+            'name'=>$request->name,
+            'details' =>$request->details,
+            'image'=>$request->image,
+            'type'=>$request->type,
+            'parent_category'=>$request->parent_category
+
+        ]);
+        toastr()->success('Success!! Category Updated Successfully');
+        return redirect()->back();
+     }
+
 }
