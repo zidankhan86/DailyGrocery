@@ -74,6 +74,7 @@ Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice
 
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role
+//how to make 7 method //
 Route::resource('/role',RoleController::class);
 Route::resource('/brand',BrandController::class);
 

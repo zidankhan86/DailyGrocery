@@ -37,7 +37,8 @@
              {{ $brand->name }}
             </td>
             <td>
-              {{ $brand->logo }}
+             <img width="200px" src="{{ url('/uploads/uploads/'.$brand->logo) }}" alt="">
+             {{-- <img width="200px" src="{{url('/uploads/uploads/'.$customer->image)}}" alt="" srcset=""> --}}
             </td>
             <td>
              <a href="{{route('brand.edit',$brand->id)}}" class="btn btn-info">Edit</a>

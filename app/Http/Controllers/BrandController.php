@@ -43,9 +43,19 @@ class BrandController extends Controller
         'name'=>'required',
      ]);
 
+         $imageName = null;
+         if($request->hasFile('logo')){
+
+            $imageName = date('Ymdhis').'.'.$request->file('logo')->getClientOriginalExtension();
+            $request->file('logo')->storeAs('/uploads',$imageName);
+
+
+         }
+         //dd($imageName);
+
         Brand::create([
             'name'=>$request->name,
-            'logo'=>$request->logo,
+            'logo'=>$imageName,
         ]);
         toastr()->success('Brand Added Successfully!!');
         return redirect()->back();

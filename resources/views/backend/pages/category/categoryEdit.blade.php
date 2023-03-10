@@ -30,7 +30,7 @@
           <label for="exampleInputCity1">Parent Category</label>
           <input type="text" class="form-control" value="{{ $categoryData->parent_category}}" name="parent_category" id="exampleInputCity1" placeholder="Parent Category">
         </div>
-        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button type="submit" class="btn btn-primary me-2">Update Change</button>
         <button class="btn btn-light">Cancel</button>
       </form>
     </div>
