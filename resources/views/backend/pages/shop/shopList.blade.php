@@ -64,8 +64,9 @@
                 <option value="">Inactive</option> </select>
               </td>
               <td>
-                
+
                <a href="{{ route('shop.edit',$data->id) }}" class="btn btn-info">Edit</a>
+               <a href="{{ route('shop.delete',$data->id) }}" class="btn btn-danger">Delete</a>
               </td>
           </tr>
 
