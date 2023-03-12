@@ -5,7 +5,7 @@
     <div class="card-body">
       <h4 class="card-title">SHOP EDIT</h4>
 
-      <form class="forms-sample" action="{{ route('shop.update',$shopData->id) }}" method="post"  enctype="">
+      <form class="forms-sample" action="{{ route('shop.update',$shopData->id) }}" method="post"  enctype="multipart/form-data">
         @csrf
         @method('put')
         <div class="form-group">

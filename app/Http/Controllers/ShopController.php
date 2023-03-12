@@ -80,9 +80,18 @@ class ShopController extends Controller
     public function shop_update(Request $request,$shop_id){
     $shopUpdate = Shop::find($shop_id);
 
+    //image
+    $imageName = null;
+    if($request->hasFile('shop_logo')){
+
+    $imageName = date('Ymdhis').'.'.$request->file('shop_logo')->getClientOriginalExtension();
+    $request->file('shop_logo')->storeAs('/uploads',$imageName);
+    
+    }
+
     $shopUpdate->update([
 
-        "shop_logo"=>$request->shop_logo,
+        "shop_logo"=>$imageName,
         "shop_name" =>$request->shop_name,
         "owner_name" =>$request->owner_name,
         "gender"=>$request->gender,
