@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProductController;
@@ -28,13 +29,24 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+//Frontend er kaj
+Route::get('/',[FrontendIndexController::class,'frontend_index'])->name('frontend');
+
+
+
+
+
+//Auth er Kaj
+
 Route::get('/login/form',[AuthController::class,'login_form'])->name('login.form');
 Route::post('/login/process',[AuthController::class,'login_process'])->name('login.process');
 Route::get('/get/registration',[AuthController::class,'registration'])->name('get.registration');
 Route::post('registration/create',[AuthController::class,'registration_create'])->name('create.registration');
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
-Route::get('/',[IndexController::class,'home'])->name('index.template');
+//Backend Er Kaj
+
+Route::get('/f',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
@@ -50,7 +62,6 @@ Route::get('/category/list',[CategoryController::class,'category_list'])->name('
 Route::get('/category/edit/{category_id}',[CategoryController::class,'category_edit'])->name('category.edit');
 Route::get('/category/delete/{category_id}',[CategoryController::class,'category_delete'])->name('category.delete');
 Route::put('/category/update/{id}',[CategoryController::class,'category_update'])->name('category.update');
-
 
 Route::get('/product/add',[ProductController::class,'products_form'])->name('product.form');
 Route::get('product/list',[ProductController::class,'product_list'])->name('product.list');
