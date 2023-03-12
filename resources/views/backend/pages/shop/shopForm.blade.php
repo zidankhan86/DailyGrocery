@@ -5,11 +5,11 @@
     <div class="card-body">
       <h4 class="card-title">SHOP FORM</h4>
 
-      <form class="forms-sample" action="{{route ('shop.store.data') }}" method="post" enctype="">
+      <form class="forms-sample" action="{{route ('shop.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">Shop Logo</label>
-          <input type="file" class="form-control"  name="shop_logo"id="exampleInputName1" placeholder="Shop Logo">
+          <input type="file" class="form-control"  name="shop_logo" id="exampleInputName1" placeholder="Shop Logo">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Shop Name</label>

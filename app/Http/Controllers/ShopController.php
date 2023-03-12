@@ -29,8 +29,21 @@ class ShopController extends Controller
 
     ]);
     //image er kaj
+    //Step 1 - image k null hote pare bale dite hobe
+    //step 2 -if diye logic likhte hobe "Jodi request er modde 'Image Field er kono file thake'
+    //step 3 - jodi kono file thake taile file take Encript koro Ymhsi diye, Orginal Extention er mather use hobe
+    //step 4 - request theke file ene ta Store korte hobe '/' folder e ,then variable name
+
+            $imageName = null;
+            if($request->hasFile('shop_logo')){
+
+            $imageName = date('Ymdhis').'.'.$request->file('shop_logo')->getClientOriginalExtension();
+            $request->file('shop_logo')->storeAs('/uploads',$imageName);
+
+    }
+    // dd($imageName);
     Shop::create([
-        "shop_logo"=>$request->shop_logo,
+        "shop_logo"=>$imageName,
         "shop_name" =>$request->shop_name,
         "owner_name" =>$request->owner_name,
         "gender"=>$request->gender,
@@ -50,6 +63,7 @@ class ShopController extends Controller
 
         return view('backend.pages.shop.shopList',compact('shoplist'));
     }
+
     public function shop_delete($shop_id){
     $delete=Shop::find($shop_id);
     $delete->delete();
@@ -57,10 +71,12 @@ class ShopController extends Controller
     return redirect()->route('shop.list');
 
     }
+
     public function shop_Edit($shop_id){
         $shopData = Shop::find($shop_id);
         return view('backend.pages.shop.shopEdit',compact('shopData'));
     }
+
     public function shop_update(Request $request,$shop_id){
     $shopUpdate = Shop::find($shop_id);
 
