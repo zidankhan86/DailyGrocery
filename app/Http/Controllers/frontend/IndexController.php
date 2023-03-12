@@ -9,6 +9,6 @@ class IndexController extends Controller
 {
     public function frontend_index(){
 
-        return view('frontend.index');
+        return view('frontend.pages.home');
     }
 }
