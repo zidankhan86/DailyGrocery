@@ -41,8 +41,8 @@
 
 
           <tr>
-            <td class="py-1">
-              {{ $data->shop_logo }}
+            <td >
+             <img width="200px" src="{{ url('/uploads/uploads/'.$data->shop_logo) }}" alt="">
             </td>
             <td>
              {{ $data->shop_name }}
