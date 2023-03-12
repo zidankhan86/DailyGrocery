@@ -86,8 +86,10 @@ class ShopController extends Controller
 
     $imageName = date('Ymdhis').'.'.$request->file('shop_logo')->getClientOriginalExtension();
     $request->file('shop_logo')->storeAs('/uploads',$imageName);
-    
+
     }
+
+    // dd($request->all());
 
     $shopUpdate->update([
 
