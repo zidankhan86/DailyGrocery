@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\ContractController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\IndexController;
@@ -34,6 +36,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[FrontendIndexController::class,'frontend_index'])->name('home');
 
 Route::get('/product/information',[FrontendProductController::class,'product_information'])->name('product.information');
+Route::get('/about/information',[AboutController::class,'about_information'])->name('about.information');
+Route::get('/contract/information',[ContractController::class,'contract_information'])->name('contract.information');
 
 
 
