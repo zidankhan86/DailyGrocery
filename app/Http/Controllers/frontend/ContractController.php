@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contract;
 use Illuminate\Http\Request;
 
 class ContractController extends Controller
@@ -11,4 +12,18 @@ class ContractController extends Controller
 
         return view('frontend.pages.contract');
     }
+    public function send_message(Request $request){
+    Contract::create([
+
+        'name'=>$request->name,
+        'email'=>$request->email,
+        'subject'=>$request->subject,
+        'message'=>$request->message,
+
+    ]);
+    return redirect()->back();
+
+
+    }
+
 }

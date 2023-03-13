@@ -27,7 +27,8 @@
             </div>
             <div class="col-lg-7 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
                 <p class="mb-4">Please Write If You Faceing Any Problem With Our Site . Share How Can Grow. How Can We Improve  .</p>
-                <form>
+                <form action="{{ route('send.message') }}" method="post">
+                    @csrf
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">

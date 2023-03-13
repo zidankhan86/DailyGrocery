@@ -38,6 +38,7 @@ Route::get('/',[FrontendIndexController::class,'frontend_index'])->name('home');
 Route::get('/product/information',[FrontendProductController::class,'product_information'])->name('product.information');
 Route::get('/about/information',[AboutController::class,'about_information'])->name('about.information');
 Route::get('/contract/information',[ContractController::class,'contract_information'])->name('contract.information');
+Route::post('/send/message',[ContractController::class,'send_message'])->name('send.message');
 
 
 
