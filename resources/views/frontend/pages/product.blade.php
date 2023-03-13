@@ -84,7 +84,7 @@
                             </div>
                             <div class="text-center p-4">
                                 <a class="d-block h5 mb-2" href="">{{ $product->product_name }}</a>
-                                <span class="text-primary me-1">{{ $product->price }}</span>
+                                <span class="text-primary me-1">{{ $product->price }} BDT</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
