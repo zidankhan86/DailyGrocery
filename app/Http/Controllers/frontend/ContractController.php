@@ -21,6 +21,7 @@ class ContractController extends Controller
         'message'=>$request->message,
 
     ]);
+    toastr()->success('Your Message Has been Sent');
     return redirect()->back();
 
 
