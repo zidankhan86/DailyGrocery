@@ -12,9 +12,8 @@
     <link href="{{url ('/frontend/img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="{{url ('https://fonts.googleapis.com') }}">
     <link rel="preconnect" href="{{url ('https://fonts.gstatic.com') }}" crossorigin>
-    <link href="{{url ('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap') }}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="{{url ('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css') }}" rel="stylesheet">
@@ -39,7 +38,7 @@
     <!-- Spinner End -->
 
 
-    
+
 
 @include('frontend.fixed.header')
 
@@ -53,11 +52,11 @@
     @yield('content')
 
 
-   
 
 
 
-    @include('frontend.fixed.footer') 
+
+    @include('frontend.fixed.footer')
 
 
     <!-- Back to Top -->

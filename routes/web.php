@@ -5,6 +5,7 @@ use App\Http\Controllers\BrandController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
+use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProductController;
@@ -30,7 +31,9 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //Frontend er kaj
-Route::get('/',[FrontendIndexController::class,'frontend_index'])->name('frontend');
+Route::get('/',[FrontendIndexController::class,'frontend_index'])->name('home');
+
+Route::get('/product/information',[FrontendProductController::class,'product_information'])->name('product.information');
 
 
 
@@ -46,7 +49,7 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 //Backend Er Kaj
 
-Route::get('/f',[IndexController::class,'home'])->name('index.template');
+Route::get('/admin',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
