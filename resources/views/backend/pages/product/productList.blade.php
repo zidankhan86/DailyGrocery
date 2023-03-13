@@ -59,7 +59,7 @@
             {{ $product->shop_name }}
             </td>
             <td>
-             {{ $product->image }}
+            <img width="200px" src="{{ url('/uploads/uploads/'.$product->image) }}" alt="">
             </td>
             <td>
              {{ $product->price }}

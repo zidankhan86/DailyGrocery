@@ -39,12 +39,22 @@ class ProductController extends Controller
 'status'=>'required'
   ]);
 
+  $imageName = null;
+         if($request->hasFile('image')){
+
+            $imageName = date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
+            $request->file('image')->storeAs('/uploads',$imageName);
+
+  }
+
+  //dd($imageName);
+
   Products::create([
 
 'product_name'=>$request->product_name,
 'shop_name' =>$request->shop_name,
 'category_id'=>$request->category_id,
-'image'=>$request->image,
+'image'=>$imageName,
 'price'=>$request->price,
 'quantity'=>$request->quantity,
 'details'=>$request->details,

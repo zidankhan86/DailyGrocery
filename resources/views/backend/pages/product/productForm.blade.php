@@ -5,7 +5,7 @@
     <div class="card-body">
       <h4 class="card-title">PRODUCT FORM</h4>
 
-      <form class="forms-sample" action="{{ route('product.store.data') }}" method="post">
+      <form class="forms-sample" action="{{ route('product.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">Product Name</label>
@@ -18,7 +18,7 @@
                 @foreach ($categories as $category)
 
                 <option value="{{ $category->id }}">{{ $category->name }}</option>
-                
+
                 @endforeach
             </select>
           </div>

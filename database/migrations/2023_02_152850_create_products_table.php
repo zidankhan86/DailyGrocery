@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('product_name');
             $table->foreignId('category_id');
             $table->string('shop_name');
-            $table->string('image')->nullable();
-            $table->string('price');
+            $table->string('image');
+            $table->double('price');
             $table->string('quantity');
             $table->string('details');
             $table->string('status');
