@@ -35,11 +35,10 @@
               </th>
           </tr>
         </thead>
+
         <tbody>
 
                   @foreach ($shoplist as $data)
-
-
           <tr>
             <td >
              <img width="200px" src="{{ url('/uploads/uploads/'.$data->shop_logo) }}" alt="">

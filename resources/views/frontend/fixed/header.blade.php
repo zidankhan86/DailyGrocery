@@ -23,7 +23,11 @@
                     </div>
                 </div>
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">Contact Us</a>
+                <a href="{{route ('login.form') }}" class="nav-item nav-link">Login</a>
+                <a href="{{route ('get.registration') }}" class="nav-item nav-link">Registration</a>
+
             </div>
+
             <div class="d-none d-lg-flex ms-2">
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                     <small class="fa fa-search text-body"></small>

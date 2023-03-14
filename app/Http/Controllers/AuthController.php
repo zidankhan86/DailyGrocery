@@ -60,6 +60,7 @@ class AuthController extends Controller
                 'role'=>"admin"
 
             ]);
+            toastr()->success('Account Created Successfully');
             return redirect()->back();
     }
     public function logout(){
