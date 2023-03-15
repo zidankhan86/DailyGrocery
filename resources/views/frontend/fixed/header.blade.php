@@ -25,9 +25,6 @@
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
                 <a href="{{route ('login.form') }}" class="nav-item nav-link">{{ __('Login') }}</a>
                 <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
-                <a href="" class="nav-item nav-link">{{ __('Language') }}</a>
-
-
             </div>
 
             <select class="" name="language" id="" onchange="location = this.value;">

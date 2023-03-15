@@ -11,6 +11,7 @@ use App\Http\Controllers\frontend\ProductController as FrontendProductController
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefoundController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShippingController;
@@ -60,6 +61,7 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 //Backend Er Kaj
 
+
 Route::get('/admin',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
@@ -96,6 +98,8 @@ Route::get('/shipping/list',[ShippingController::class,'shipping_list'])->name('
 Route::get('/refound/list',[RefoundController::class,'refound_list'])->name('refound.list');
 Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('reviews.list');
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
+
+Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
 
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role
