@@ -11,4 +11,13 @@ class IndexController extends Controller
 
         return view('frontend.pages.home');
     }
+
+    //for change language
+    public function changeLanguage($lang){
+
+        session()->put('loc',$lang);
+        return redirect()->back();
+
+
+    }
 }

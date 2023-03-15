@@ -3,7 +3,7 @@
 
 
  <!-- Product Start -->
- <div class="container-xxl py-5 mt-5">
+ <div class="container-xxl py-5">
     <div class="container">
         <div class="row g-0 gx-5 align-items-end">
             <div class="col-lg-6">
@@ -15,13 +15,13 @@
             <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                 <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">dfdfsd</a>
+                        <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Vegetable</a>
                     </li>
                     <li class="nav-item me-2">
-                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">sdfsd </a>
+                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Fruits </a>
                     </li>
                     <li class="nav-item me-0">
-                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">dsfdsf</a>
+                        <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Fresh</a>
                     </li>
                 </ul>
             </div>
@@ -36,7 +36,7 @@
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">fdfdfdfd</a>
+                                <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
@@ -57,7 +57,7 @@
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">dfgdfgdgdf</a>
+                                <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
                                 <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
@@ -71,20 +71,15 @@
                             </div>
                         </div>
                     </div>
-
-
-                       @foreach ($products as $product)
-
-
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
-                                <img class="img-fluid w-100" src="{{url ('/uploads/uploads/'.$product->image) }}" alt="">
-                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">old</div>
+                                <img class="img-fluid w-100" src="{{url ('/frontend/img/product-3.jpg') }}" alt="">
+                                <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">{{ $product->product_name }}</a>
-                                <span class="text-primary me-1">{{ $product->price }} BDT</span>
+                                <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                <span class="text-primary me-1">$19.00</span>
                                 <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
@@ -92,17 +87,11 @@
                                     <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cfdfdsart</a>
+                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
                     </div>
-
-                       @endforeach
-
-
-
-
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                         <div class="product-item">
                             <div class="position-relative bg-light overflow-hidden">
@@ -397,16 +386,16 @@
                                 <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                             </div>
                             <div class="text-center p-4">
-                                <a class="d-block h5 mb-2" href="">xyz</a>
-                                <span class="text-primary me-1">$19xxxxxx.00</span>
-                                <span class="text-body text-decoration-line-through">$29.xxxxxxx00</span>
+                                <a class="d-block h5 mb-2" href="">Fresh Tomato</a>
+                                <span class="text-primary me-1">$19.00</span>
+                                <span class="text-body text-decoration-line-through">$29.00</span>
                             </div>
                             <div class="d-flex border-top">
                                 <small class="w-50 text-center border-end py-2">
-                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>xxxxxl</a>
+                                    <a class="text-body" href=""><i class="fa fa-eye text-primary me-2"></i>View detail</a>
                                 </small>
                                 <small class="w-50 text-center py-2">
-                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add xxxxxxxx cart</a>
+                                    <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
                                 </small>
                             </div>
                         </div>
