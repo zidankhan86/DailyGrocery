@@ -53,7 +53,7 @@ Route::post('/send/message',[ContractController::class,'send_message'])->name('s
 
 //Auth er Kaj
 
-Route::get('/login/form',[AuthController::class,'login_form'])->name('login.form');
+Route::get('/login/form',[AuthController::class,'login_form'])->name('login');
 Route::post('/login/process',[AuthController::class,'login_process'])->name('login.process');
 Route::get('/get/registration',[AuthController::class,'registration'])->name('get.registration');
 Route::post('registration/create',[AuthController::class,'registration_create'])->name('create.registration');
@@ -61,8 +61,10 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 //Backend Er Kaj
 
+Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
-Route::get('/admin',[IndexController::class,'home'])->name('index.template');
+
+Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
@@ -106,6 +108,7 @@ Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
 //how to make 7 method //
 Route::resource('/role',RoleController::class);
 Route::resource('/brand',BrandController::class);
+});
 
 
 
