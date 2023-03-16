@@ -28,7 +28,7 @@
             </div>
 
             <select class="" name="language" id="" onchange="location = this.value;">
-                <option @if(session()->get('loc')=='en') selected @endif  value="{{route('switch.lang','en')}}">English</option>
+                <option  @if(session()->get('loc')=='en') selected @endif  value="{{route('switch.lang','en')}}">English</option>
                 <option  @if(session()->get('loc')=='bn') selected @endif  value="{{route('switch.lang','bn')}}">Bangla</option>
                 <option  @if(session()->get('loc')=='ko') selected @endif  value="{{route('switch.lang','ko')}}">Korean</option>
 
