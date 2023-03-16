@@ -82,7 +82,15 @@ class RoleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $roleData = Role::find($id);
+        $roleData->update([
+            'role_name'=>$request->role_name,
+             'status'=>$request->status,
+
+
+        ]);
+        toastr()->success('Success!');
+        return back();
     }
 
     /**

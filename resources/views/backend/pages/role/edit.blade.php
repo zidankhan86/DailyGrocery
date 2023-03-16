@@ -4,7 +4,7 @@
 <div class="card">
     <div class="card-body">
       <h4 class="card-title">Role Edit</h4>
-      <form class="forms-sample" action="" method="post">
+      <form class="forms-sample" action="{{route ('role.update',$roleData->id) }}" method="post">
         @csrf
         @method('put')
         <div class="form-group">
@@ -21,7 +21,7 @@
             </select>
           </div>
 
-        <button type="submit" class="btn btn-primary me-2">Submit</button>
+        <button type="submit" class="btn btn-primary me-2">UPDATE CHANGES</button>
         <button class="btn btn-light">Cancel</button>
       </form>
     </div>
