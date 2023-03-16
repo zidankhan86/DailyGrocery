@@ -23,7 +23,7 @@
                     </div>
                 </div>
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
-                <a href="{{route ('login.form') }}" class="nav-item nav-link">{{ __('Login') }}</a>
+                <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
                 <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
             </div>
 
