@@ -105,4 +105,11 @@ class ProductController extends Controller
         toastr()->success('Success! Product Updated Successfully');
         return redirect()->back();
     }
+//Place Order
+
+public function placeOrder(){
+
+    return view('frontend.pages.productDetails.placeOrder');
+}
+
 }

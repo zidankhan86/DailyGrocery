@@ -25,9 +25,6 @@
   <body>
 
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-      <h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-
-      <a class="btn btn-outline-primary" href="#">Sign up</a>
     </div>
     <div class="container">
       <div class="card-deck mb-3 text-center">
@@ -45,7 +42,7 @@
               <li>Priority email support</li>
               <li>Help center access</li>
             </ul>
-            <button type="button" class="btn btn-lg btn-block btn-primary">Place Order</button>
+            <a href="{{route ('place.order') }}" class="btn btn-info">Place Order</a>
           </div>
         </div>
 
