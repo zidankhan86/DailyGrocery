@@ -14,6 +14,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefoundController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SallerController;
 use App\Http\Controllers\ShippingController;
 use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +53,7 @@ Route::post('/send/message',[ContractController::class,'send_message'])->name('s
 
 
 Route::get('/seller/registration',[AuthController::class,'sellerRegistration'])->name('become.a.seller');
+Route::post('/become/seller/store',[SallerController::class,'sellerRegistrationStore'])->name('seller.registration.store');
 
 //Auth er Kaj
 

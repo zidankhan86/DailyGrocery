@@ -23,9 +23,7 @@
   <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="../../images/favicon.png" />
-
-<script type="text/javascript" class="flasher-js">(function() {    var rootScript = 'https://cdn.jsdelivr.net/npm/@flasher/flasher@1.2.4/dist/flasher.min.js';    var FLASHER_FLASH_BAG_PLACE_HOLDER = {};    var options = mergeOptions([], FLASHER_FLASH_BAG_PLACE_HOLDER);    function mergeOptions(first, second) {        return {            context: merge(first.context || {}, second.context || {}),            envelopes: merge(first.envelopes || [], second.envelopes || []),            options: merge(first.options || {}, second.options || {}),            scripts: merge(first.scripts || [], second.scripts || []),            styles: merge(first.styles || [], second.styles || []),        };    }    function merge(first, second) {        if (Array.isArray(first) && Array.isArray(second)) {            return first.concat(second).filter(function(item, index, array) {                return array.indexOf(item) === index;            });        }        return Object.assign({}, first, second);    }    function renderOptions(options) {        if(!window.hasOwnProperty('flasher')) {            console.error('Flasher is not loaded');            return;        }        requestAnimationFrame(function () {            window.flasher.render(options);        });    }    function render(options) {        if ('loading' !== document.readyState) {            renderOptions(options);            return;        }        document.addEventListener('DOMContentLoaded', function() {            renderOptions(options);        });    }    if (1 === document.querySelectorAll('script.flasher-js').length) {        document.addEventListener('flasher:render', function (event) {            render(event.detail);        });    }    if (window.hasOwnProperty('flasher') || !rootScript || document.querySelector('script[src="' + rootScript + '"]')) {        render(options);    } else {        var tag = document.createElement('script');        tag.setAttribute('src', rootScript);        tag.setAttribute('type', 'text/javascript');        tag.onload = function () {            render(options);        };        document.head.appendChild(tag);    }})();</script>
-
+</head>
 
 <body>
   <div class="container-scroller">
@@ -41,11 +39,12 @@
             <div class="col-12 grid-margin stretch-card">
               <div class="card">
                 <div class="card-body">
-                   <i  class="fa fa-text-width" aria-hidden="true"> <h1 class="btn-info" style="text-align: center">DailyGrocery</h1></i>
-                  <h4 class="card-title">Register New Account</h4>
+                    <h1 style="text-align: center"  class="btn-info" style="text-decoration-style: wavy">DailyGrocery</p>
+                  <h4 class="card-title">Create Account</h4>
 
-                 <form class="forms-sample" action="http://127.0.0.1:8000/registration/create" method="post">
-        <input type="hidden" name="_token" value="GjOPE6185YDaDWJQdeEtFjlyiDgriC1IiARCu1Yx">        <div class="form-group">
+                 <form class="forms-sample" action="{{route('seller.registration.store')}}" method="post">
+        @csrf
+        <div class="form-group">
           <label for="exampleInputUsername1">Your Name</label>
           <input type="text" name="name" class="form-control" id="exampleInputUsername1" placeholder="Username">
         </div>
@@ -53,6 +52,14 @@
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
         </div>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Phone</label>
+            <input type="number" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Address</label>
+            <input type="text" name="address" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          </div>
         <div class="form-group">
             <label for="exampleInputConfirmPassword1">Password</label>
             <input type="password" name="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
@@ -63,9 +70,8 @@
             Remember me
           </label>
         </div>
-        <button type="submit" class="btn btn-primary me-2">Register</button>
+        <button type="submit" class="btn btn-primary me-2">Submit</button>
         <button class="btn btn-light">Cancel</button>
-
 
         <!-- content-wrapper ends -->
         <!-- partial:../../partials/_footer.html -->

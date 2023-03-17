@@ -72,4 +72,6 @@ class AuthController extends Controller
     public function sellerRegistration(){
         return view('frontend.pages.becomeSeller.sellerRegistration');
     }
+
+    
 }
