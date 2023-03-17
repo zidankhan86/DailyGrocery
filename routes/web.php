@@ -51,7 +51,7 @@ Route::post('/send/message',[ContractController::class,'send_message'])->name('s
 });
 
 
-
+Route::get('/seller/registration',[AuthController::class,'sellerRegistration'])->name('become.a.seller');
 
 //Auth er Kaj
 

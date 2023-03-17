@@ -68,4 +68,8 @@ class AuthController extends Controller
 
         return redirect()->back();
     }
+
+    public function sellerRegistration(){
+        return view('frontend.pages.becomeSeller.sellerRegistration');
+    }
 }
