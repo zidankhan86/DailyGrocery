@@ -53,11 +53,11 @@
         </div>
         <div class="form-group">
           <label for="exampleInputPassword1">Address</label>
-          <input type="text" name="address" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <input type="text" name="address" class="form-control" id="exampleInputPassword1" placeholder="Enter Address">
         </div>
         <div class="form-group">
           <label for="exampleInputConfirmPassword1">Phone</label>
-          <input type="number" name="phone" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+          <input type="number" name="phone" class="form-control" id="exampleInputConfirmPassword1" placeholder="Enter Phone">
         </div>
         <div class="form-group">
             <label for="exampleInputConfirmPassword1">Password</label>

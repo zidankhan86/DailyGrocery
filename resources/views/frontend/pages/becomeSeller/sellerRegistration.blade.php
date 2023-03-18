@@ -53,14 +53,6 @@
           <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Phone</label>
-            <input type="number" name="phone" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Address</label>
-            <input type="text" name="address" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-        <div class="form-group">
             <label for="exampleInputConfirmPassword1">Password</label>
             <input type="password" name="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
           </div>

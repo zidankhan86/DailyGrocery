@@ -13,8 +13,6 @@ class SallerController extends Controller
 
             'name'=>$request->name,
                 'email'=>$request->email,
-                'address'=>$request->address,
-                'phone'=>$request->phone,
                 'password'=>bcrypt($request->password),
                 'role'=>"seller"
 
