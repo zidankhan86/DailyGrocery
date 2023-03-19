@@ -39,7 +39,7 @@
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
                     <small class="fa fa-search text-body"></small>
                 </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
                 </a>
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="">

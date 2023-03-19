@@ -10,4 +10,10 @@ class ProfileController extends Controller
 
         return view('backend.pages.profile.profile');
     }
+
+    public function customerProfile(){
+        
+        return view('backend.pages.profile.customerProfile');
+    }
+
 }

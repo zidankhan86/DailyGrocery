@@ -50,6 +50,7 @@ Route::post('/billing/information/store',[FrontendProductController::class,'bill
 Route::get('/about/information',[AboutController::class,'about_information'])->name('about.information');
 Route::get('/contract/information',[ContractController::class,'contract_information'])->name('contract.information');
 Route::post('/send/message',[ContractController::class,'send_message'])->name('send.message');
+Route::get('/customer/profile',[ProfileController::class,'customerProfile'])->name('customer.profile');
 
 });
 
