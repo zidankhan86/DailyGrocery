@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +22,7 @@ class AuthController extends Controller
 
         if(auth()->user()->role=='admin'){
 
-        return redirect()->route('dashboard')->with('message','login done');
+        return redirect()->route('dashboard')->with('message','login successful');
     }else{
 
         Auth::logout();
@@ -57,7 +56,7 @@ class AuthController extends Controller
                 'address'=>$request->address,
                 'phone'=>$request->phone,
                 'password'=>bcrypt($request->password),
-                'role'=>"admin"
+                'role'=>"customer"
 
             ]);
             toastr()->success('Account Created Successfully');
@@ -66,12 +65,12 @@ class AuthController extends Controller
     public function logout(){
         Auth::logout();
 
-        return redirect()->back();
+        return redirect()->route('home');
     }
 
     public function sellerRegistration(){
         return view('frontend.pages.becomeSeller.sellerRegistration');
     }
 
-    
+
 }
