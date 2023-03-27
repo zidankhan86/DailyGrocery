@@ -20,9 +20,15 @@ class AuthController extends Controller
     if(Auth::attempt($PorichoyPotro))
     {
 
-        if(auth()->user()->role=='admin'){
+        if(auth()->user()->role=='admin' or 'customer'){
 
-        return redirect()->route('dashboard')->with('message','login successful');
+            if(auth()->user()->role == 'admin'){
+
+                return redirect()->route('dashboard')->with('message','login successful');
+            }else{
+                return redirect()->route('home')->with('message','Login done');
+            }
+
     }else{
 
         Auth::logout();
