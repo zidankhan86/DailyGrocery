@@ -112,4 +112,13 @@ public function placeOrder(){
     return view('frontend.pages.productDetails.placeOrder');
 }
 
+//search
+
+public function search(Request $request){
+
+    $searchResult=Products::where('product_name','LIKE','%'.$request->search_key.'%')->get();
+    
+    return view('frontend.pages.search.search', compact('searchResult'));
+}
+
 }

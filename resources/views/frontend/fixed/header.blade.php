@@ -3,8 +3,20 @@
 
     <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn @if(! (request()->route()->getName() == 'home')) bg-white @endif" data-wow-delay="0.1s">
         <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-            <h1 class="fw-bold text-primary m-0">F<span class="text-secondary">oo</span>dy</h1>
+            <h1 class="fw-bold text-primary m-0">Grocery</h1>
         </a>
+
+        <form action="{{route('search')}}">
+            
+            <div class="input-group">
+                <input name="search_key" type="text" class="form-control" placeholder="Search for products">
+                <div class="input-group-append">
+                        <button type="submit" class="btn btn-success">Search</button>
+                </div>
+            </div>
+        </form>
+
+
         <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,22 +41,17 @@
             </div>
 
             <select class="" name="language" id="" onchange="location = this.value;">
-                <option  @if(session()->get('loc')=='en') selected @endif  value="{{route('switch.lang','en')}}">English</option>
-                <option  @if(session()->get('loc')=='bn') selected @endif  value="{{route('switch.lang','bn')}}">Bangla</option>
-                <option  @if(session()->get('loc')=='ko') selected @endif  value="{{route('switch.lang','ko')}}">Korean</option>
+                <option  @if(session()->get('loc')=='en') selected @endif  value="{{route('switch.lang','en')}}">En</option>
+                <option  @if(session()->get('loc')=='bn') selected @endif  value="{{route('switch.lang','bn')}}">Bn</option>
+                <option  @if(session()->get('loc')=='ko') selected @endif  value="{{route('switch.lang','ko')}}">Ko</option>
 
             </select>
 
             <div class="d-none d-lg-flex ms-2">
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                    <small class="fa fa-search text-body"></small>
-                </a>
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
                 </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                    <small class="fa fa-shopping-bag text-body"></small>
-                </a>
+
             </div>
         </div>
     </nav>

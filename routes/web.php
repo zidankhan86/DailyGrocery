@@ -30,11 +30,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
-//Frontend er kaj
+
+//FRONTEND ....
 
 Route::group(['middleware'=>'localization'] ,function(){
 
@@ -52,13 +53,15 @@ Route::get('/contract/information',[ContractController::class,'contract_informat
 Route::post('/send/message',[ContractController::class,'send_message'])->name('send.message');
 Route::get('/customer/profile',[ProfileController::class,'customerProfile'])->name('customer.profile');
 
+Route::get('/search/product',[ProductController::class,'search'])->name('search');
+
 });
 
 
 Route::get('/seller/registration',[AuthController::class,'sellerRegistration'])->name('become.a.seller');
 Route::post('/become/seller/store',[SallerController::class,'sellerRegistrationStore'])->name('seller.registration.store');
 
-//Auth er Kaj
+//AUTH ....
 
 Route::get('/login/form',[AuthController::class,'login_form'])->name('login');
 Route::post('/login/process',[AuthController::class,'login_process'])->name('login.process');
@@ -66,7 +69,7 @@ Route::get('/get/registration',[AuthController::class,'registration'])->name('ge
 Route::post('registration/create',[AuthController::class,'registration_create'])->name('create.registration');
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
-//Backend Er Kaj
+//BACKEND ....
 
 Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
 
