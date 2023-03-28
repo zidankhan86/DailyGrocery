@@ -99,9 +99,14 @@
                 </div>
 
                 <div class="row mt-3">
+
                     <div class="col-12">
-                        <button type="submit" id="btnSubmit" class="btn btn-primary d-block mx-auto btn-submit">Submit</button>
+                        <button type="submit" id="btnSubmit" class="btn btn-primary d-block mx-auto btn-submit">Pay Now </button>
                     </div>
+                    <div>
+                        <button type="submit" id="btnSubmit" class="btn btn-danger d-block mx-auto btn-submit">COD </button>
+                    </div>
+
                 </div>
             </div>
         </div>
