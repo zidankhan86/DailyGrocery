@@ -41,7 +41,7 @@
               <li>Details :{{ $product->details }}</li>
               <li>Avaiable in stock</li>
               <li>Priority email support</li>
-              
+
             </ul>
             <a href="{{route ('place.order') }}" class="btn btn-info">Place Order</a>
           </div>

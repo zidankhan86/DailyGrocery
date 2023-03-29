@@ -1,23 +1,24 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ShopController;
 use App\Http\Controllers\BrandController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\CustomerController;
-use App\Http\Controllers\frontend\AboutController;
-use App\Http\Controllers\frontend\ContractController;
-use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
-use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\NoticeController;
+use App\Http\Controllers\SallerController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RefoundController;
-use App\Http\Controllers\RoleController;
-use App\Http\Controllers\SallerController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ShippingController;
-use App\Http\Controllers\ShopController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\ContractController;
+use App\Http\Controllers\SslCommerzPaymentController;
+use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
+use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,24 @@ use Illuminate\Support\Facades\Route;
 Route::get('/livewire', function () {
     return view('livewire.hello-world');
 });
+
+
+
+
+
+// SSLCOMMERZ Start
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout'])->name('checkout');
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay.now');
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+//SSLCOMMERZ END
 
 
 //FRONTEND ....

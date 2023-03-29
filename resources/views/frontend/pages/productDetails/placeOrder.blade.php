@@ -1,7 +1,7 @@
 @extends('frontend.index')
 @section('content')
 <br><br><br>
-<form action="{{route ('billing.info.store') }}" method="post">
+<form action="{{route ('pay.now') }}" method="post">
     @csrf
 <section class="order-form m-4">
     <div class="container pt-4">
