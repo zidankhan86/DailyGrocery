@@ -8,7 +8,7 @@
         @csrf
         <div class="form-group">
           <label for="exampleInputName1">Name</label>
-          <input type="text" class="form-control" name="role_name" id="exampleInputName1" placeholder="Name">
+          <input type="text" class="form-control" name="role_name" required id="exampleInputName1" placeholder="Name">
         </div>
 
 
