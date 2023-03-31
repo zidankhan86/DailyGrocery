@@ -55,15 +55,12 @@ class AuthController extends Controller
 
 
             User::create([
-
-
                 'name'=>$request->name,
                 'email'=>$request->email,
                 'address'=>$request->address,
                 'phone'=>$request->phone,
                 'password'=>bcrypt($request->password),
                 'role'=>"customer"
-
             ]);
             toastr()->success('Account Created Successfully');
             return redirect()->back();

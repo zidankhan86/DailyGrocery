@@ -107,9 +107,9 @@ class ProductController extends Controller
     }
 //Place Order
 
-public function placeOrder(){
-
-    return view('frontend.pages.productDetails.placeOrder');
+public function placeOrder($id){
+    $product = Products::find($id);
+    return view('frontend.pages.productDetails.placeOrder',compact('product'));
 }
 
 //search
@@ -117,7 +117,7 @@ public function placeOrder(){
 public function search(Request $request){
 
     $searchResult=Products::where('product_name','LIKE','%'.$request->search_key.'%')->get();
-    
+
     return view('frontend.pages.search.search', compact('searchResult'));
 }
 

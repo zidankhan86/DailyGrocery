@@ -28,14 +28,13 @@ class ProductController extends Controller
         // dd($request->all());
 
         Billing::create([
-            'f_name'=>$request->f_name,
-            'l_name'=>$request->l_name,
+            'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,
             'date'=>$request->date,
             'address'=>$request->address,
             'road'=>$request->road,
-            'city'=>$request->city,
+
 
 
         ]);

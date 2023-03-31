@@ -1,7 +1,7 @@
 @extends('frontend.index')
 @section('content')
 <br><br><br>
-<form action="{{route ('pay.now') }}" method="post">
+<form action="{{route ('pay.now',$product->id) }}" method="post">
     @csrf
 <section class="order-form m-4">
     <div class="container pt-4">
@@ -20,15 +20,10 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-outline">
-                            <input type="text" name="f_name" id="form1" class="form-control order-form-input" placeholder="First Name" />
+                            <input type="text" name="name" id="form1" class="form-control order-form-input" placeholder="Enter Name" />
                         </div>
                     </div>
-                    <div class="col-sm-6 mt-2 mt-sm-0">
-                        <div class="form-outline">
-                            <input type="text" name="l_name" id="form2" class="form-control order-form-input" placeholder="Last Name" />
 
-                        </div>
-                    </div>
                 </div>
 
                 <div class="row mt-3 mx-4">
@@ -80,22 +75,9 @@
                             <label class="form-label" for="form6">Street Address Line 2</label>
                         </div>
                     </div>
-                    <div class="col-sm-6 mt-2 pe-sm-2">
-                        <div class="form-outline">
-                            <input type="text" name="city" id="form7" class="form-control order-form-input" placeholder="City" />
-                            <label class="form-label" for="form7">City</label>
-                        </div>
-                    </div>
 
 
-                    <div class="col-sm-6 mt-2 ps-sm-0">
-                        <div class="form-outline">
-                            <select name="country" id="" class="form-control">
-                                <option value="bangladesh">Bangladesh</option>
 
-                            </select>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="row mt-3">

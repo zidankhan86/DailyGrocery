@@ -43,7 +43,7 @@ Route::get('/livewire', function () {
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout'])->name('checkout');
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
 
-Route::post('/pay', [SslCommerzPaymentController::class, 'index'])->name('pay.now');
+Route::post('/pay/{product_id}', [SslCommerzPaymentController::class, 'index'])->name('pay.now');
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
@@ -64,7 +64,7 @@ Route::get('/switch-lang/{lang}',[FrontendIndexController::class,'changeLanguage
 
 Route::get('/product/information',[FrontendProductController::class,'product_information'])->name('product.information');
 Route::get('/product/description/{id}',[FrontendProductController::class,'product_description'])->name('product.description');
-Route::get('/place/order',[ProductController::class,'placeOrder'])->name('place.order');
+Route::get('/place/order/{product_id}',[ProductController::class,'placeOrder'])->name('place.order');
 Route::post('/billing/information/store',[FrontendProductController::class,'billingStore'])->name('billing.info.store');
 
 Route::get('/about/information',[AboutController::class,'about_information'])->name('about.information');
@@ -79,6 +79,11 @@ Route::get('/search/product',[ProductController::class,'search'])->name('search'
 
 Route::get('/seller/registration',[AuthController::class,'sellerRegistration'])->name('become.a.seller');
 Route::post('/become/seller/store',[SallerController::class,'sellerRegistrationStore'])->name('seller.registration.store');
+
+
+Route::post('/seller/login', [SallerController::class, 'sellerLogin'])->name('seller.login');
+Route::post('/login/process/seller',[SallerController::class,'seller_login_process'])->name('seller.login');
+//Route::post('/seller/login')
 
 //AUTH ....
 
@@ -135,6 +140,9 @@ Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role
 //how to make 7 method //
+
+//How to use refresh
+//php artisan migrate:refresh --path=database\migrations\2023_03_18_065607_create_billings_table.php
 Route::resource('/role',RoleController::class);
 Route::resource('/brand',BrandController::class);
 });
