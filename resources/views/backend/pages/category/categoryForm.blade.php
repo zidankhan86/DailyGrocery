@@ -6,9 +6,16 @@
       <h4 class="card-title">CATEGORY FORM</h4>
       <form class="forms-sample" action="{{route ('category.store.data') }}" method="post">
         @csrf
+
+        @if($errors->any())
+        @foreach($errors->all() as $message)
+        <p class="btn btn-danger">{{ $message }}</p>
+        @endforeach
+        @endif
+
         <div class="form-group">
           <label for="exampleInputName1">Name</label>
-          <input type="text" class="form-control" name="name" required id="exampleInputName1" placeholder="Name">
+          <input type="text" class="form-control" name="name"  id="exampleInputName1" placeholder="Name">
         </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Details</label>
