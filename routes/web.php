@@ -77,13 +77,14 @@ Route::get('/search/product',[ProductController::class,'search'])->name('search'
 });
 
 
+//CUSTOM GUARD AUTH......
+
 Route::get('/seller/registration',[AuthController::class,'sellerRegistration'])->name('become.a.seller');
 Route::post('/become/seller/store',[SallerController::class,'sellerRegistrationStore'])->name('seller.registration.store');
 
+Route::get('/seller/login', [SallerController::class, 'sellerLogin'])->name('seller.login');
+Route::post('/login/process/seller',[SallerController::class,'seller_login_process'])->name('seller.login.process');
 
-Route::post('/seller/login', [SallerController::class, 'sellerLogin'])->name('seller.login');
-Route::post('/login/process/seller',[SallerController::class,'seller_login_process'])->name('seller.login');
-//Route::post('/seller/login')
 
 //AUTH ....
 
@@ -95,7 +96,7 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 //BACKEND ....
 
-Route::group(['middleware'=>'auth','prefix'=>'admin'],function(){
+Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
 
 
 Route::get('/',[IndexController::class,'home'])->name('index.template');

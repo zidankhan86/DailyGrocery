@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Seller;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class SallerController extends Controller
 {
@@ -21,9 +22,17 @@ class SallerController extends Controller
         return back();
 
     }
-    public function seller_login_process(){
+    public function seller_login_process(Request $request){
 
-        
+        $credentials = $request->except('_tocken');
+
+        if(auth()->guard('seller')->attempt($credentials)){
+            return redirect()->route('dashboard');
+        }else{
+            return redirect()->route('home');
+        }
+
+
 
     }
 }
