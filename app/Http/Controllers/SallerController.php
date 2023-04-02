@@ -11,6 +11,13 @@ class SallerController extends Controller
 {
     public function sellerRegistrationStore(Request $request){
 
+        $request->validate([
+            'name'=>'required',
+            'email'=>'required',
+            'password'=>'required'
+
+        ]);
+
         Seller::create([
 
             'name'          =>$request->name,
