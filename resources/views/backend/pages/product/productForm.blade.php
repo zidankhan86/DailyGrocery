@@ -7,9 +7,18 @@
 
       <form class="forms-sample" action="{{ route('product.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
+
+        @if($errors->any())
+        @foreach($errors->all() as $message)
+        <p class="btn btn-danger">{{ $message }}</p>
+        @endforeach
+        @endif
+
+
+
         <div class="form-group">
           <label for="exampleInputName1">Product Name</label>
-          <input type="text" class="form-control" name="product_name" required id="exampleInputName1" placeholder="Product Name">
+          <input type="text" class="form-control" name="product_name"  id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
             <label for="exampleInputName1">Category Name</label>
@@ -24,7 +33,7 @@
           </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Shop Name</label>
-          <input type="text" class="form-control" name="shop_name" required id="exampleInputEmail3" placeholder="Shop Name">
+          <input type="text" class="form-control" name="shop_name"  id="exampleInputEmail3" placeholder="Shop Name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword4">Product Image</label>

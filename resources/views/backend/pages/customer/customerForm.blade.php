@@ -7,6 +7,13 @@
 
       <form class="forms-sample" action="{{route ('customer.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
+
+        @if($errors->any())
+        @foreach($errors->all() as $message)
+        <p class="btn btn-danger">{{ $message }}</p>
+        @endforeach
+        @endif
+
         <div class="form-group">
           <label for="exampleInputName1">First Name</label>
           <input type="text" class="form-control" name="first_name" required id="exampleInputName1" placeholder="First Name">
