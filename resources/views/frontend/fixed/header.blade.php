@@ -50,6 +50,11 @@
             <div class="d-none d-lg-flex ms-2">
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
+
+                </a>
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                    <small class="	fas fa-cart-plus"></small>
+                    <span>{{session()->has('cart') ? count(session()->get('cart')) : 0}}</span>
                 </a>
 
             </div>

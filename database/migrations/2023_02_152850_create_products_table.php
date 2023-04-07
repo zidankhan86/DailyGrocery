@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('quantity');
             $table->string('details');
             $table->string('status');
+            $table->double('subtotal')->nullable();
             $table->timestamps();
         });
     }

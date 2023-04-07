@@ -13,4 +13,9 @@ class Products extends Model
     public function CategoryRelation(){
         return $this->belongsTo(Category::class, 'category_id','id');
     }
+
+
+    // public function OrderRelation(){
+    //     return $this->belongsTo(Order::class,'')
+    // }
 }

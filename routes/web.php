@@ -15,6 +15,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ShippingController;
 use App\Http\Controllers\frontend\AboutController;
+use App\Http\Controllers\frontend\AddToCartController;
 use App\Http\Controllers\frontend\ContractController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
@@ -73,6 +74,8 @@ Route::post('/send/message',[ContractController::class,'send_message'])->name('s
 Route::get('/customer/profile',[ProfileController::class,'customerProfile'])->name('customer.profile');
 
 Route::get('/search/product',[ProductController::class,'search'])->name('search');
+Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('add.to.cart');
+
 
 });
 

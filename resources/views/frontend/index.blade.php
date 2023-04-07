@@ -28,6 +28,13 @@
 
     <!-- Template Stylesheet -->
     <link href="{{url ('/frontend/css/style.css') }}" rel="stylesheet">
+
+
+    <style>
+        #toast-container{
+            margin-top: 55px !important
+        }
+    </style>
 </head>
 
 <body>

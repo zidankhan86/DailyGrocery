@@ -58,7 +58,8 @@ class ProductController extends Controller
 'price'=>$request->price,
 'quantity'=>$request->quantity,
 'details'=>$request->details,
-'status'=>$request->status
+'status'=>$request->status,
+'subtotal'=>$request->subtotal
 
 
   ]);
