@@ -32,25 +32,25 @@
                     <div class="row g-3">
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                <input type="text" class="form-control" name="name" required id="name" placeholder="Your Name">
                                 <label for="name">Enter Your Name</label>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-floating">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+                                <input type="email" class="form-control" name="email" required id="email" placeholder="Your Email">
                                 <label for="email">Enter Your Email</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <input type="text" class="form-control" name="subject"  id="subject" placeholder="Subject">
+                                <input type="text" class="form-control" name="subject" required  id="subject" placeholder="Subject">
                                 <label for="subject">Enter Subject</label>
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" name="message" placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
+                                <textarea class="form-control" name="message" required placeholder="Leave a message here" id="message" style="height: 200px"></textarea>
                                 <label for="message">Write Message</label>
                             </div>
                         </div>

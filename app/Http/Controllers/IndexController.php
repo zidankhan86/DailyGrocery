@@ -22,6 +22,7 @@ class IndexController extends Controller
     }
     public function dashboard(){
 
+        //For Products
         $totalShop = Shop::get()->count();
          //For Products
          $totalProducts = Products::get()->count();
