@@ -41,7 +41,7 @@
                     </div>
                     <div>
                       <p class="statistics-title">Total Order</p>
-                      <h3 class="rate-percentage">7,682</h3>
+                      <h3 class="rate-percentage">{{ $totalOrder }}</h3>
 
                     </div>
                     <div>

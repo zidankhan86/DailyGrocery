@@ -39,7 +39,7 @@
                       <h6 class="mb-0">Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      {{auth("frontendAuth")->user()->name }}
+                      {{auth()->user()->name }}
                     </div>
                   </div>
                   <hr>
