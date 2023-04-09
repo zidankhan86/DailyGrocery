@@ -34,34 +34,26 @@
           </tr>
         </thead>
         <tbody>
+
+
+@foreach ($orders as $order)
           <tr>
-            <td class="py-1">
-              <img src="../../images/faces/face1.jpg" alt="image"/>
-            </td>
+            <td>{{ $order->date }}</td>
+            <td> </td>
+            <td>{{ $order->amount }} </td>
+            <td> {{ $order->created_at }}</td>
+            <td> </td>
+            <td>{{ $order->status }} </td>
+            <td>{{ $order->address }} </td>
+
             <td>
-              Herman Beck
+<a href="" class="btn btn-info">View</a>
+<a href="" class="btn btn-danger">Delete</a>
             </td>
-            <td>
-              <div class="progress">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </td>
-            <td>
-              $ 77.99
-            </td>
-            <td>
-              May 15, 2015
-            </td>
-            <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
-              <td>
-                May 15, 2015
-              </td>
           </tr>
+          @endforeach
+
+
 
         </tbody>
       </table>

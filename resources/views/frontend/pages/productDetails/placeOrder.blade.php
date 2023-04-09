@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-12">
                         <div class="form-outline datepicker" data-mdb-toggle-button="false">
-                            <input name="date"
+                            <input name="created_at"
                             type="datetime-local" class="form-control order-form-input" id="datepicker1" data-mdb-toggle="datepicker" />
                             <label for="datepicker1" class="form-label">Select a date</label>
                         </div>

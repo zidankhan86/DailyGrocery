@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Billing;
 use App\Models\Category;
 use App\Models\Products;
 use Illuminate\Http\Request;
@@ -16,8 +17,9 @@ class ProductController extends Controller
         return view('backend.pages.product.productForm',compact('categories'));
     }
     public function order_list(){
+        $orders = Billing::all();
 
-        return view('backend.pages.order.orderList');
+        return view('backend.pages.order.orderList',compact('orders'));
     }
     public function reviews_list(){
         return view('backend.pages.reviews.reviewsList');
