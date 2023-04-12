@@ -22,7 +22,7 @@ class ShopController extends Controller
    'owner_name'=>'required',
    'gender'=>'required',
    'phone'=>'required|min:11|numeric',
-   'email'=>'required',
+   'email'=>'required|unique:users',
    'description'=>'required',
    'status'=>'required'
 
@@ -83,7 +83,6 @@ class ShopController extends Controller
     //image
     $imageName = null;
     if($request->hasFile('shop_logo')){
-
     $imageName = date('Ymdhis').'.'.$request->file('shop_logo')->getClientOriginalExtension();
     $request->file('shop_logo')->storeAs('/uploads',$imageName);
 

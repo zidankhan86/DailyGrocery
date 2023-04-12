@@ -38,9 +38,6 @@ Route::get('/livewire', function () {
 });
 
 
-
-
-
 // SSLCOMMERZ Start
 Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout'])->name('checkout');
 Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
@@ -78,6 +75,7 @@ Route::get('/search/product',[ProductController::class,'search'])->name('search'
 
 Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('add.to.cart');
 Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.cart');
+Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.clear');
 
 
 });

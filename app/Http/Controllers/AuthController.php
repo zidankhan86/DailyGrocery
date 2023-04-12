@@ -43,6 +43,8 @@ class AuthController extends Controller
 
         return view('backend.pages.loginRegistration.registration');
     }
+
+    //Customer Registration
     public function registration_create(Request $request){
 
 
@@ -50,8 +52,9 @@ class AuthController extends Controller
             'name'=>'required',
             'email'=>'required',
             'address'=>'required',
-            'phone'=>'required',
-            'password'=>'required']);
+            'phone'=>'required|min:11',
+            'password'=>'required|min:5'
+        ]);
 
 
             User::create([
@@ -62,8 +65,10 @@ class AuthController extends Controller
                 'password'=>bcrypt($request->password),
                 'role'=>"customer"
             ]);
+
             toastr()->success('Account Created Successfully');
             return redirect()->back();
+
     }
     public function logout(){
         Auth::logout();

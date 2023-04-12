@@ -14,7 +14,7 @@ class SallerController extends Controller
         $request->validate([
             'name'=>'required',
             'email'=>'required',
-            'password'=>'required'
+            'password'=>'required|min:5',
 
         ]);
 

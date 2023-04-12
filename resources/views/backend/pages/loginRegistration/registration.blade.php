@@ -57,7 +57,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputConfirmPassword1">Phone</label>
-          <input type="number" name="phone" class="form-control" id="exampleInputConfirmPassword1" placeholder="Enter Phone">
+          <input type="tel" name="phone" class="form-control" id="exampleInputConfirmPassword1" placeholder="Enter Phone">
         </div>
         <div class="form-group">
             <label for="exampleInputConfirmPassword1">Password</label>

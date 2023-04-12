@@ -25,15 +25,7 @@
                 <a href="{{route ('home') }}" class="nav-item nav-link active">{{ __('Home') }}</a>
                 <a href="{{route ('about.information') }}" class="nav-item nav-link">{{ __('About Us') }}</a>
                 <a href="{{ route('product.information') }}" class="nav-item nav-link">{{ __('Products') }}</a>
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">{{ __('Pages') }}</a>
-                    <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="feature.html" class="dropdown-item">Our Features</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
+                
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
                 <a href="{{route ('become.a.seller') }}" style="color: rgb(255, 127, 127)" class="nav-item nav-link">{{ __('Become a Seller') }}</a>
                 <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
