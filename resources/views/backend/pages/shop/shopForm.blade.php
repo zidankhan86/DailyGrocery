@@ -29,7 +29,7 @@
 
         <div class="form-group">
           <label for="exampleInputCity1">Phone Number</label>
-          <input type="number" class="form-control" name="phone" id="exampleInputCity1" placeholder="Phone Number">
+          <input type="tel" required class="form-control" name="phone" id="exampleInputCity1" placeholder="Phone Number">
         </div>
         <div class="form-group">
             <label for="exampleInputCity1">E-mail</label>

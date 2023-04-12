@@ -42,6 +42,7 @@ class ProductController extends Controller
   ]);
 
   $imageName = null;
+  
          if($request->hasFile('image')){
 
             $imageName = date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();

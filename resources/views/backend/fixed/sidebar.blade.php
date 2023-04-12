@@ -93,6 +93,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{ route('generate.report') }}">
+          <i class="menu-icon mdi mdi-window-close"></i>
+          <span class="menu-title">Report</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}">
           <i class="menu-icon mdi mdi-window-close"></i>
           <span class="menu-title">Logout</span>

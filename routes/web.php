@@ -20,6 +20,7 @@ use App\Http\Controllers\frontend\ContractController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,7 +75,9 @@ Route::post('/send/message',[ContractController::class,'send_message'])->name('s
 Route::get('/customer/profile',[ProfileController::class,'customerProfile'])->name('customer.profile');
 
 Route::get('/search/product',[ProductController::class,'search'])->name('search');
+
 Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('add.to.cart');
+Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.cart');
 
 
 });
@@ -147,8 +150,13 @@ Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
 
 //How to use refresh
 //php artisan migrate:refresh --path=database\migrations\2023_03_18_065607_create_billings_table.php
+
 Route::resource('/role',RoleController::class);
 Route::resource('/brand',BrandController::class);
+
+//Report
+Route::get('/generate/report',[ReportController::class,'report'])->name('generate.report');
+
 });
 
 

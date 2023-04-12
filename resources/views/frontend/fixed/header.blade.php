@@ -52,9 +52,10 @@
                     <small class="fa fa-user text-body"></small>
 
                 </a>
-                <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
+                <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{route ('view.cart') }}">
                     <small class="	fas fa-cart-plus"></small>
                     <span>{{session()->has('cart') ? count(session()->get('cart')) : 0}}</span>
+
                 </a>
 
             </div>

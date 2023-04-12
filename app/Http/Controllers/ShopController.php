@@ -21,7 +21,7 @@ class ShopController extends Controller
    'shop_name' =>'required',
    'owner_name'=>'required',
    'gender'=>'required',
-   'phone'=>'required',
+   'phone'=>'required|min:11|numeric',
    'email'=>'required',
    'description'=>'required',
    'status'=>'required'
@@ -59,7 +59,7 @@ class ShopController extends Controller
 }
 
     public function shop_list(){
-        $shoplist= Shop::paginate(2);
+        $shoplist= Shop::paginate(10);
 
         return view('backend.pages.shop.shopList',compact('shoplist'));
     }

@@ -55,9 +55,15 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="{{url ('/frontend/img/about.jpg') }}">
+                    
+                    <div  p-5 pe-0">
+                        {{-- <img class="img-fluid w-100" src="{{url ('/frontend/img/about.jpg') }}"> --}}
+
+                        <iframe width="500" height="300"
+                        src="https://www.youtube.com/embed/c5MKlSoubOY" frameborder="0">
+                        </iframe>
                     </div>
+
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <h1 class="display-5 mb-4">Best Organic Fruits And Vegetables</h1>

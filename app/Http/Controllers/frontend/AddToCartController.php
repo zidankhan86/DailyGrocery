@@ -21,7 +21,7 @@ class AddToCartController extends Controller
                 //step 1: cart empty
                 //add to cart- first product
                     $myCart[$id]=[
-                      'name'=>$product->name,
+                    'product_name'=>$product->product_name,
                       'price'=>$product->price,
                       'quantity'=>1,
                       'subtotal'=>$product->price,//price x quantity
@@ -36,9 +36,10 @@ class AddToCartController extends Controller
             //step 2:Cart not empty but product not exist
             //add to cart
 
+
             if(!array_key_exists($id,$cart)){
                 $cart[$id]=[
-                    'name'=>$product->name,
+                    'product_name'=>$product->product_name,
                     'price'=>$product->price,
                     'quantity'=>1,
                     'subtotal'=>$product->price,//price x quantity
@@ -64,5 +65,9 @@ class AddToCartController extends Controller
 
 
 
+    }
+    public function viewCart(){
+        $products = Products::all();
+        return view('frontend.pages.addtocart.ViewProduct',compact('products'));
     }
 }

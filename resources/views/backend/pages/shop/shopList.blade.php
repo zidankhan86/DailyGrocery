@@ -25,8 +25,9 @@
               Product Quntity
             </th>
             <th>
-              Orders
+               Shop Joined
             </th>
+
             <th>
                 Status
               </th>
@@ -50,18 +51,19 @@
               {{ $data->owner_name }}
             </td>
             <td>
-            .......
+                {{ $data->phone }}
             </td>
-            <td>
-             {{ $data->phone }}
-            </td>
+
             <td>
                 {{ $data->quantity }}
                </td>
             <td>
-               <select name="" id=""> <option value=""> Active  </option>
-                <option value="">Inactive</option> </select>
+               {{ $data->created_at->diffForHumans() }}
               </td>
+              <td>
+                <select name="" id=""> <option value=""> Active  </option>
+                 <option value="">Inactive</option> </select>
+               </td>
               <td>
 
                <a href="{{ route('shop.edit',$data->id) }}" class="btn btn-info">Edit</a>

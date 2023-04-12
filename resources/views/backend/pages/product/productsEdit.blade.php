@@ -13,7 +13,7 @@
           <input type="text" class="form-control" value="{{$productsData->product_name}}" name="product_name" id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
-            <label for="exampleInputName1">Category Name</label>
+            <label for="exampleInputName1">Category Name</label> 
             <select name="category_id" id="" class="form-control">
                 @foreach ($categories as $category)
 

@@ -41,7 +41,7 @@
             <td>{{ $order->date }}</td>
             <td> </td>
             <td>{{ $order->amount }} </td>
-            <td> {{ $order->created_at }}</td>
+            <td> </td>
             <td> </td>
             <td>{{ $order->status }} </td>
             <td>{{ $order->address }} </td>
