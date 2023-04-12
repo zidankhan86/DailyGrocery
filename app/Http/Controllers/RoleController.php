@@ -38,7 +38,7 @@ class RoleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'role_name'=>'required',
+            'role_name'=>'required|max:120',
             'status'=>'required',
         ]);
          Role::create([

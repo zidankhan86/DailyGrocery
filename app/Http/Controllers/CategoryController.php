@@ -23,7 +23,7 @@ class CategoryController extends Controller
 
         $request->validate([
 
-            'name'=>'required',
+            'name'=>'required|max:120',
             'details' =>'required',
             'type'=>'required',
             'parent_category'=>'required',

@@ -33,16 +33,16 @@ class ProductController extends Controller
 
   $request->validate([
 
-'product_name'=>'required',
-'shop_name'=>'required',
-'price' =>'required',
-'quantity'=>'required',
+'product_name'=>'required|max:140',
+'shop_name'=>'required|max:120',
+'price' =>'required|min:2',
+'quantity'=>'required|min:2',
 'details'=>'required',
 'status'=>'required'
   ]);
 
   $imageName = null;
-  
+
          if($request->hasFile('image')){
 
             $imageName = date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
