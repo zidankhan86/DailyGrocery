@@ -20,11 +20,11 @@
         </div>
         <div class="form-group">
           <label for="exampleInputEmail3">Last Name</label>
-          <input type="text" class="form-control" name="last_name" id="exampleInputEmail3" placeholder="Last Name">
+          <input type="text" class="form-control" name="last_name" required id="exampleInputEmail3" placeholder="Last Name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword4">Phone</label>
-          <input type="number" class="form-control" name="phone" required id="exampleInputPassword4" placeholder="Phone">
+          <input type="tel" class="form-control" name="phone" required id="exampleInputPassword4" placeholder="Phone">
         </div>
         <div class="form-group">
             <label for="exampleInputPassword4">E-mail</label>

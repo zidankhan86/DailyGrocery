@@ -50,7 +50,7 @@ class AuthController extends Controller
 
         $request->validate([
             'name'=>'required',
-            'email'=>'required',
+            'email'=>'required|unique:users',
             'address'=>'required',
             'phone'=>'required|min:11',
             'password'=>'required|min:5'
@@ -67,7 +67,7 @@ class AuthController extends Controller
             ]);
 
             toastr()->success('Account Created Successfully');
-            return redirect()->back();
+            return redirect()->route('login');
 
     }
     public function logout(){

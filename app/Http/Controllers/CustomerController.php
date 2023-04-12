@@ -22,10 +22,11 @@ class CustomerController extends Controller
     public function customer_create(Request $request){
         //dd($request->all());
         $request->validate([
-        'first_name'=>'required',
-        'last_name'=>'required',
-        'phone'=>'required',
-        'email'=>'required',
+
+        'first_name'=>'required|max:120',
+        'last_name'=>'required|max:120',
+        'phone'=>'required|min:11|numeric',
+        'email'=>'required|email|unique:users',
         'address'=>'required'
 
 
