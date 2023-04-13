@@ -26,7 +26,7 @@ class SallerController extends Controller
 
         ]);
         toastr()->success('Account create success');
-        return back();
+        return to_route('login');
 
     }
     public function seller_login_process(Request $request){

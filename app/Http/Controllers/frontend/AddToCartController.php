@@ -66,8 +66,35 @@ class AddToCartController extends Controller
 
 
     }
+
+    
+    //View Cart
     public function viewCart(){
         $products = Products::all();
         return view('frontend.pages.addtocart.ViewProduct',compact('products'));
     }
+
+
+    //Clear Cart
+    public function CartClear()
+    {
+            session()->forget('cart');
+            toastr()->success('Cart Clear success.');
+            return redirect()->back();
+    }
+
+
+
+    public function deleteCart($id)
+    {
+        //Delete Cart
+
+                $cart=session()->get('cart');
+               // dd($cart);
+                unset($cart[$id]);
+               //dd($cart);
+                session()->put('cart',$cart);
+                toastr()->success('Item removed.');
+            return redirect()->back();
+            }
 }

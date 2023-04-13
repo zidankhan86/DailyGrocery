@@ -21,6 +21,7 @@ use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\ReportController;
+use App\Models\Role;
 
 /*
 |--------------------------------------------------------------------------
@@ -76,6 +77,7 @@ Route::get('/search/product',[ProductController::class,'search'])->name('search'
 Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('add.to.cart');
 Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.cart');
 Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.clear');
+Route::get('/delete/cart/{id}',[AddToCartController::class,'deleteCart'])->name('delete.cart');
 
 
 });
@@ -154,6 +156,8 @@ Route::resource('/brand',BrandController::class);
 
 //Report
 Route::get('/generate/report',[ReportController::class,'report'])->name('generate.report');
+Route::get('/generate/report/post', [ReportController::class, 'generate'])->name('generate.report.post');
+
 
 });
 

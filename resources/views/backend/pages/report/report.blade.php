@@ -12,7 +12,7 @@
 
 <div class="container"  >
     <div class="container">
-        <form action="" method="post">
+        <form action=""{{ route('generate.report.post') }} >
 
             @csrf
             <div class="form-group">
@@ -34,7 +34,7 @@
 
 <div class="card-body">
 
-    <h4 class="card-title">PRODUCT LIST</h4>
+    <h4 class="card-title" id="printableArea">PRODUCT LIST</h4>
     <div class="table-responsive">
       <table class="table table-striped" >
         <thead>
