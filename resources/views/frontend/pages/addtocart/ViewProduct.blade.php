@@ -29,15 +29,15 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 
               <!-- Single item -->
 
-@foreach ($products as $product)
+@foreach (session()->get('cart') as $product)
 
 
               <div class="row">
                 <div class="col-lg-3 col-md-12 mb-4 mb-lg-0">
                   <!-- Image -->
                   <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
-                    <img width="100" height="100" src="{{url ('/uploads/uploads/'.$product->image)}}"
-                      class="w-100" />
+                    {{-- <img width="100" height="100" src="{{url ('/uploads/uploads/'.$product->image)}}" --}}
+                      {{-- class="w-100" /> --}}
                     <a href="#!">
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                     </a>
@@ -47,7 +47,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 
                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                   <!-- Data -->
-                  <p><strong>{{ $product->product_name }}</strong></p>
+                  {{-- <p><strong>{{ $product->product_name }}</strong></p> --}}
                   <p>Color: red</p>
                   <p>Size: M</p>
 

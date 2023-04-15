@@ -23,13 +23,23 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="{{route ('home') }}" class="nav-item nav-link active">{{ __('Home') }}</a>
-                <a href="{{route ('about.information') }}" class="nav-item nav-link">{{ __('About Us') }}</a>
+                <a href="{{route ('about.information') }}" class="nav-item nav-link">{{ __('About') }}</a>
                 <a href="{{ route('product.information') }}" class="nav-item nav-link">{{ __('Products') }}</a>
-                
-                <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact Us') }}</a>
+
+                <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact') }}</a>
                 <a href="{{route ('become.a.seller') }}" style="color: rgb(255, 127, 127)" class="nav-item nav-link">{{ __('Become a Seller') }}</a>
-                <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
                 <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
+                <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
+
+
+
+
+
+
+
+            </div>
+            <div>
+
             </div>
 
             <select class="" name="language" id="" onchange="location = this.value;">
@@ -40,8 +50,22 @@
             </select>
 
             <div class="d-none d-lg-flex ms-2">
+
+                @auth
+                @if(auth()->user()->role=='customer'or'admin')
+
+
+
+
+                <a href="{{route ('logout') }}" class="nav-item nav-link">{{ __('Logout') }}</a>
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
+
+
+                    @endif
+                    @endauth
+
+
 
                 </a>
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{route ('view.cart') }}">

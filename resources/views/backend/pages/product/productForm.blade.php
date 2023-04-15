@@ -13,8 +13,7 @@
         <p class="btn btn-danger">{{ $message }}</p>
         @endforeach
         @endif
-
-
+ 
 
         <div class="form-group">
           <label for="exampleInputName1">Product Name</label>
