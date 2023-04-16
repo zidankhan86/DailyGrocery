@@ -25,18 +25,8 @@
                 <a href="{{route ('home') }}" class="nav-item nav-link active">{{ __('Home') }}</a>
                 <a href="{{route ('about.information') }}" class="nav-item nav-link">{{ __('About') }}</a>
                 <a href="{{ route('product.information') }}" class="nav-item nav-link">{{ __('Products') }}</a>
-
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact') }}</a>
                 <a href="{{route ('become.a.seller') }}" style="color: rgb(255, 127, 127)" class="nav-item nav-link">{{ __('Become a Seller') }}</a>
-                <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
-                <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
-
-
-
-
-
-
-
             </div>
             <div>
 
@@ -46,24 +36,23 @@
                 <option  @if(session()->get('loc')=='en') selected @endif  value="{{route('switch.lang','en')}}">En</option>
                 <option  @if(session()->get('loc')=='bn') selected @endif  value="{{route('switch.lang','bn')}}">Bn</option>
                 <option  @if(session()->get('loc')=='ko') selected @endif  value="{{route('switch.lang','ko')}}">Ko</option>
-
             </select>
 
             <div class="d-none d-lg-flex ms-2">
 
+
+
                 @auth
-                @if(auth()->user()->role=='customer'or'admin')
-
-
-
-
+                @if(auth()->user()->role=='customer')
                 <a href="{{route ('logout') }}" class="nav-item nav-link">{{ __('Logout') }}</a>
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
-
-
                     @endif
-                    @endauth
+                    
+                @else
+                <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
+                <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
+                @endauth
 
 
 
