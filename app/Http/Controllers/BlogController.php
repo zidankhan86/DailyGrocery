@@ -13,24 +13,26 @@ class BlogController extends Controller
 
     public function blogStore(Request $request){
 
+
+
         //Image
         $imageName = null;
+        if($request->hasFile('image')){
 
-        if ($request->hasFile('image')) {
+           $imageName = date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
+           $request->file('image')->storeAs('/uploads',$imageName);
 
-            //Encryption
-            $imageName=date('Ymdhsis').'.'.$request->file('image')->getClientOriginalExtension();
-            $request->file('image')->storeAs('/uploads', $imageName);
 
         }
-        dd($request->all());
+        //dd($request->all());
+        //dd($imageName);
 
         Blog::create([
             'description' =>$request->description,
             'image'=>$imageName,
 
         ]);
-        toast()->success('Success');
+        toastr()->success('Success');
         return redirect()->back();
 
 
