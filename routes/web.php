@@ -76,6 +76,7 @@ Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.c
 Route::get('/delete/cart/{id}',[AddToCartController::class,'deleteCart'])->name('delete.cart');
 
 Route::get('/blog/form',[BlogController::class,'blogForm'])->name('blog.form');
+Route::post('/blog/post',[BlogController::class,'blogStore'])->name('blog.store');
 
 
 });

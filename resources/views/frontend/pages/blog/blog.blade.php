@@ -17,12 +17,12 @@
 
         <div class="form-group">
           <label for="exampleInputName1">Blog Description</label>
-          <input type="text" class="form-control" name="product_name"  id="exampleInputName1" placeholder="Product Name">
+          <input type="text" class="form-control" name="description"  id="exampleInputName1" placeholder="Add Description">
         </div>
 
         <div class="form-group">
           <label for="exampleInputPassword4">Product Image</label>
-          <input type="file" class="form-control" name="image" required id="exampleInputPassword4" placeholder="Shop Image">
+          <input type="file" class="form-control" name="image" required id="exampleInputPassword4" placeholder="Upload Image">
         </div>
 
         <button type="submit" class="btn btn-primary me-2">Submit</button>
