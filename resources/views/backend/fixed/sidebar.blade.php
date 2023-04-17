@@ -99,6 +99,12 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{ route('blog.form') }}">
+          <i class="menu-icon mdi mdi-window-close"></i>
+          <span class="menu-title">Add Blog</span>
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ route('logout') }}">
           <i class="menu-icon mdi mdi-window-close"></i>
           <span class="menu-title">Logout</span>

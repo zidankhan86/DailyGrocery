@@ -48,9 +48,9 @@
                 <a class="btn-sm-square bg-white rounded-circle ms-3" href="{{ route('customer.profile') }}">
                     <small class="fa fa-user text-body"></small>
                     @endif
-                    
+
                 @else
-                <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Registration') }}</a>
+                <a href="{{route ('get.registration') }}" class="nav-item nav-link">{{ __('Signup') }}</a>
                 <a href="{{route ('login') }}" class="nav-item nav-link">{{ __('Login') }}</a>
                 @endauth
 

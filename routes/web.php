@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\BrandController;
@@ -73,6 +74,8 @@ Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('
 Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.cart');
 Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.clear');
 Route::get('/delete/cart/{id}',[AddToCartController::class,'deleteCart'])->name('delete.cart');
+
+Route::get('/blog/form',[BlogController::class,'blogForm'])->name('blog.form');
 
 
 });

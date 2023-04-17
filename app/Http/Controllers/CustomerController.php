@@ -16,8 +16,11 @@ class CustomerController extends Controller
     public function customer_list(){
 
         $customerlist=Customer::paginate(5);
+        
 
         return view('backend.pages.customer.customerList',compact('customerlist'));
+
+
     }
     public function customer_create(Request $request){
         //dd($request->all());

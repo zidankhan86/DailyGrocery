@@ -17,14 +17,18 @@ class AddToCartController extends Controller
             $cart=session()->get('cart');
 //            dd($cart);
             if(!$cart)
+
+
             {
                 //step 1: cart empty
                 //add to cart- first product
+
+
                     $myCart[$id]=[
                     'product_name'=>$product->product_name,
                       'price'=>$product->price,
                       'quantity'=>1,
-                      'subtotal'=>$product->price,//price x quantity
+                      'subtotal'=>$product->price,   //price x quantity
                     ];
 
                   session()->put('cart',$myCart);
@@ -59,34 +63,34 @@ class AddToCartController extends Controller
 
             toastr()->success('Cart updated.');
             return redirect()->back();
-        }
-        toastr()->error('No Product Found.');
-        return redirect()->back();
-
-
-
-    }
-
-    
-    //View Cart
-    public function viewCart(){
-        $products = Products::all();
-        return view('frontend.pages.addtocart.ViewProduct',compact('products'));
-    }
-
-
-    //Clear Cart
-    public function CartClear()
-    {
-            session()->forget('cart');
-            toastr()->success('Cart Clear success.');
+            }
+            toastr()->error('No Product Found.');
             return redirect()->back();
+
+
+
     }
 
 
+                //View Cart
+                public function viewCart(){
+                    $products = Products::all();
+                    return view('frontend.pages.addtocart.ViewProduct',compact('products'));
+                }
 
-    public function deleteCart($id)
-    {
+
+                //Clear Cart
+                public function CartClear()
+                {
+                        session()->forget('cart');
+                        toastr()->success('Cart Clear success.');
+                        return redirect()->back();
+                }
+
+
+
+                public function deleteCart($id)
+                {
         //Delete Cart
 
                 $cart=session()->get('cart');
