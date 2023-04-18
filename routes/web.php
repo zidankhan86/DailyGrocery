@@ -151,6 +151,7 @@ Route::post('/blog/post',[BlogController::class,'blogStore'])->name('blog.store'
 Route::get('/blog/table',[BlogController::class,'blogTable'])->name('blog.table');
 Route::get('/delete/blog/{id}',[BlogController::class,'blogDelete'])->name('blog.delete');
 Route::get('/blog/edit/{id}',[BlogController::class,'blogEdit'])->name('blog.edit');
+Route::put('/blog/update/{id}',[BlogController::class,'blogUpdate'])->name('blog.update');
 
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role

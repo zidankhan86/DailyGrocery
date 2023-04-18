@@ -5,8 +5,9 @@
     <div class="card-body">
       <h4 class="card-title">Blog FORM</h4>
 
-      <form class="forms-sample" action="{{route ('blog.store') }}" method="post" enctype="multipart/form-data">
+      <form class="forms-sample" action="{{route ('blog.update',$blogData->id) }}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('put')
 
 
         @if($errors->any())

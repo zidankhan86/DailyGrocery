@@ -62,5 +62,30 @@ return redirect()->back();
         return view('frontend.pages.blog.blogEdit',compact('blogData'));
 
     }
+    public function blogUpdate(Request $request, $id){
+
+//Image
+$imageName = null;
+
+if($request->hasFile('image')){
+
+   $imageName = date('Ymdhis').'.'.$request->file('image')->getClientOriginalExtension();
+   $request->file('image')->storeAs('/uploads',$imageName);
+}
+
+
+        $blogData = Blog::find($id);
+        $blogData->update([
+
+            'description' =>$request->description,
+            'date' =>$request->date,
+            'image'=>$imageName,
+
+        ]);
+        toastr()->success('Updated ','Success!');
+        return redirect()->back();
+
+
+    }
 
 }
