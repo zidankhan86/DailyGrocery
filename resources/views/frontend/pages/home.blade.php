@@ -274,7 +274,7 @@
                         <a class="d-block h5 lh-base mb-4" href="">{{ $blog->description }}</a>
                         <div class="text-muted border-top pt-4">
                             <small class="me-3"><i class="fa fa-user text-primary me-2"></i>Admin</small>
-                            <small class="me-3"><i class="fa fa-calendar text-primary me-2">26 jun 2023</i></small>
+                            <small class="me-3"><i class="fa fa-calendar text-primary me-2">{{ $blog->date }}</i></small>
                         </div>
                     </div>
                 </div>

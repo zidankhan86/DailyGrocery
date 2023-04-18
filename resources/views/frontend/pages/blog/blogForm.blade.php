@@ -7,7 +7,7 @@
 
       <form class="forms-sample" action="{{route ('blog.store') }}" method="post" enctype="multipart/form-data">
         @csrf
-        @method('DELETE')
+
 
         @if($errors->any())
         @foreach($errors->all() as $message)
@@ -17,9 +17,14 @@
 
 
         <div class="form-group">
-          <label for="exampleInputName1">Blog Description</label>
-          <input type="text" class="form-control" name="description"  id="exampleInputName1" placeholder="Add Description">
+          <label for="tex">Blog Description</label>
+          <input type="text" class="form-control" name="description"  id="text" placeholder="Add Description">
         </div>
+
+        <div class="form-group">
+            <label for="tex">Upload Date</label>
+            <input type="datetime-local" class="form-control" name="date"  id="text" placeholder="Add date">
+          </div>
 
         <div class="form-group">
           <label for="exampleInputPassword4">Product Image</label>

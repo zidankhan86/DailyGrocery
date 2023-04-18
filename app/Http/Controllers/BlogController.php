@@ -28,7 +28,9 @@ class BlogController extends Controller
         //dd($imageName);
 
         Blog::create([
+
             'description' =>$request->description,
+            'date' =>$request->date,
             'image'=>$imageName,
 
         ]);
