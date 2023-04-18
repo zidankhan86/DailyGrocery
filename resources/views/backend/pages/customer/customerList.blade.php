@@ -67,9 +67,10 @@
                 <select name="" id=""><option value="">Active</option><option value="">Inactive</option></select>
               </td>
               <td>
-                <a href="{{ route('customer.delete',$customer->id) }}" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
+                <a href="{{ route('customer.delete',$customer->id) }}"
+                     onclick="return confirm('Are you sure you want to delete this item?')" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
                 <a href="{{ route('customer.edit',$customer->id) }}" class="btn btn-info">Edit</a>
-              
+
               </td>
           </tr>
 

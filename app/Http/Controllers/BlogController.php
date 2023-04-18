@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class BlogController extends Controller
 {
     public function blogForm(){
-        return view('frontend.pages.blog.blog');
+        return view('frontend.pages.blog.blogForm');
     }
 
     public function blogStore(Request $request){
@@ -43,4 +43,14 @@ class BlogController extends Controller
         $blogs = Blog::all();
         return view('frontend.pages.blog.blogTable',compact('blogs'));
     }
+
+    public function blogDelete($id){
+
+        $deleteBlog = Blog::find($id);
+        $deleteBlog->delete();
+
+toastr()->warning('Delete');
+return redirect()->back();
+    }
+
 }

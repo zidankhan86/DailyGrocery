@@ -58,7 +58,8 @@
                 <select name="" id=""><option value="">Active</option><option value="">Inactive</option></select>
               </td>
               <td>
-                <a href="{{ route('category.delete',$category) }}" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
+                <a href="{{ route('category.delete',$category) }}"
+                 onclick="return confirm('Are you sure you want to delete this item?')" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
                 <a href="{{ route('category.edit',$category) }}" class="btn btn-info">Edit</a>
 
               </td>

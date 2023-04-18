@@ -40,7 +40,8 @@
             {{-- </td> --}}
             <td>
              <a href="" class="btn btn-info">Edit</a>
-             <a href=""><button class="btn btn-danger">Delete</button></a>
+             <a href="{{route ('blog.delete',$blog->id) }}"><button class="btn btn-danger"
+                 onclick="return confirm('Are you sure you want to delete this item?')">Delete</button></a>
             </td>
 
           </tr>

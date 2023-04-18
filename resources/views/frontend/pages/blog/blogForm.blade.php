@@ -7,6 +7,7 @@
 
       <form class="forms-sample" action="{{route ('blog.store') }}" method="post" enctype="multipart/form-data">
         @csrf
+        @method('DELETE')
 
         @if($errors->any())
         @foreach($errors->all() as $message)

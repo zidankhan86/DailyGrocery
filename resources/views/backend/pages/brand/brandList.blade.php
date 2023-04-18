@@ -42,7 +42,8 @@
             </td>
             <td>
              <a href="{{route('brand.edit',$brand->id)}}" class="btn btn-info">Edit</a>
-             <a href=""><button class="btn btn-danger">Delete</button></a>
+             <a href=""><button class="btn btn-danger"
+                 onclick="return confirm('Are you sure you want to delete this item?')">Delete</button></a>
             </td>
 
           </tr>

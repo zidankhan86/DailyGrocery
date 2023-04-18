@@ -48,7 +48,8 @@
 
             <td>
 <a href="" class="btn btn-info">View</a>
-<a href="" class="btn btn-danger">Delete</a>
+<a href="" class="btn btn-danger"
+ onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
             </td>
           </tr>
           @endforeach
