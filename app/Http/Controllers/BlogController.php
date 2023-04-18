@@ -55,4 +55,12 @@ toastr()->warning('Delete');
 return redirect()->back();
     }
 
+    public function blogEdit($id){
+
+        $blogData = Blog::find($id);
+
+        return view('frontend.pages.blog.blogEdit',compact('blogData'));
+
+    }
+
 }

@@ -39,7 +39,7 @@
              {{-- <img width="200px" src="{{url('/uploads/uploads/'.$customer->image)}}" alt="" srcset=""> --}}
             {{-- </td> --}}
             <td>
-             <a href="" class="btn btn-info">Edit</a>
+             <a href="{{route ('blog.edit',$blog->id) }}" class="btn btn-info">Edit</a>
              <a href="{{route ('blog.delete',$blog->id) }}"><button class="btn btn-danger"
                  onclick="return confirm('Are you sure you want to delete this item?')">Delete</button></a>
             </td>

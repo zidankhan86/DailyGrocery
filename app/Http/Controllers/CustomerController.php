@@ -16,7 +16,7 @@ class CustomerController extends Controller
     public function customer_list(){
 
         $customerlist=Customer::paginate(5);
-        
+
 
         return view('backend.pages.customer.customerList',compact('customerlist'));
 
@@ -70,6 +70,9 @@ class CustomerController extends Controller
  return view('backend.pages.customer.customerEdit',compact('customerData'));
 
     }
+    
+//Update
+
     public function customer_update(Request $request ,$customer_id){
 
         $customerUpdate = Customer::find($customer_id);

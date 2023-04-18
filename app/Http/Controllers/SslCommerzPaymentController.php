@@ -6,7 +6,7 @@ use App\Models\Products;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Library\SslCommerz\SslCommerzNotification;
-use App\Http\Controllers\SslCommerzPaymentController;
+//use App\Http\Controllers\SslCommerzPaymentController;
 
 class SslCommerzPaymentController extends Controller
 {
