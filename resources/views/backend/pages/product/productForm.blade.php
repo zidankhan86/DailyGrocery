@@ -13,14 +13,14 @@
         <p class="btn btn-danger">{{ $message }}</p>
         @endforeach
         @endif
- 
+
 
         <div class="form-group">
           <label for="exampleInputName1">Product Name</label>
           <input type="text" class="form-control" name="product_name"  id="exampleInputName1" placeholder="Product Name">
         </div>
         <div class="form-group">
-            <label for="exampleInputName1">Category Name</label>
+            <label for="">Category Name</label>
             <select class="form-control" name="category_id" required id="">
 
                 @foreach ($categories as $category)
@@ -31,20 +31,20 @@
             </select>
           </div>
         <div class="form-group">
-          <label for="exampleInputEmail3">Shop Name</label>
-          <input type="text" class="form-control" name="shop_name"  id="exampleInputEmail3" placeholder="Shop Name">
+          <label for="">Shop Name</label>
+          <input type="text" class="form-control" name="shop_name"  id="" placeholder="Shop Name">
         </div>
         <div class="form-group">
           <label for="exampleInputPassword4">Product Image</label>
           <input type="file" class="form-control" name="image" required id="exampleInputPassword4" placeholder="Shop Image">
         </div>
         <div class="form-group">
-          <label for="exampleInputCity1">Price</label>
-          <input type="number" class="form-control" name="price" required id="exampleInputCity1" placeholder="Price">
+          <label for="exampleInputPrice">Price</label>
+          <input type="number" class="form-control" name="price" required id="exampleInputPrice" placeholder="Price">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword4">Quantity</label>
-            <input type="number" class="form-control" name="quantity" required id="exampleInputPassword4" placeholder="Quantity">
+            <label for="">Quantity</label>
+            <input type="number" class="form-control" name="quantity" required id="" placeholder="Quantity">
           </div>
         <div class="form-group">
           <label for="exampleTextarea1">Product Details</label>

@@ -68,7 +68,7 @@
               </td>
               <td>
                 <a href="{{ route('customer.delete',$customer->id) }}"
-                     onclick="return confirm('Are you sure you want to delete this item?')" class="btn btn-danger"><i class="mdi mdi-key-change"></i></a>
+                     onclick="return confirm('Are you sure you want to delete this item?')" class="btn btn-danger" onclick="return confirm('Do you wants to delete ?')">Delete <i class="mdi-delete-circle"></i></a>
                 <a href="{{ route('customer.edit',$customer->id) }}" class="btn btn-info">Edit</a>
 
               </td>

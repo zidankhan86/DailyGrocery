@@ -78,7 +78,7 @@
               <td>
 
                 <a href="{{ route('products.edit',$product->id) }}" class="btn btn-info">Edit</a>
-                <a href="{{ route('product.delete',$product->id) }}" class="btn btn-danger">Delete</a>
+                <a href="{{ route('product.delete',$product->id) }}" onclick="return confirm('Do you wants to delete product?')" class="btn btn-danger">Delete</a>
               </td>
           </tr>
           @endforeach

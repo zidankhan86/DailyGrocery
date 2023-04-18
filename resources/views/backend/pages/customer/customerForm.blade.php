@@ -19,20 +19,20 @@
           <input type="text" class="form-control" name="first_name" required id="exampleInputName1" placeholder="First Name">
         </div>
         <div class="form-group">
-          <label for="exampleInputEmail3">Last Name</label>
-          <input type="text" class="form-control" name="last_name" required id="exampleInputEmail3" placeholder="Last Name">
+          <label for="">Last Name</label>
+          <input type="text" class="form-control" name="last_name" required id="" placeholder="Last Name">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword4">Phone</label>
-          <input type="tel" class="form-control" name="phone" required id="exampleInputPassword4" placeholder="Phone">
+          <label for="">Phone</label>
+          <input type="tel" class="form-control" name="phone" required id="" placeholder="Phone">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword4">E-mail</label>
-            <input type="email" class="form-control" name="email" required id="exampleInputPassword4" placeholder="E-mail">
+            <label for="exampleInputEmail">E-mail</label>
+            <input type="email" class="form-control" name="email" required id="exampleInputEmail" placeholder="E-mail">
           </div>
           <div class="form-group">
-            <label for="exampleInputPassword4">Image</label>
-            <input type="file" class="form-control" name="image" id="exampleInputPassword4" placeholder="Image">
+            <label for="">Image</label>
+            <input type="file" class="form-control" name="image" id="" placeholder="Image">
           </div>
 
         <div class="form-group">

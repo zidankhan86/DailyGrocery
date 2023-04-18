@@ -27,8 +27,8 @@
           </div>
 
         <div class="form-group">
-          <label for="exampleInputPassword4">Product Image</label>
-          <input type="file" class="form-control" name="image" required id="exampleInputPassword4" placeholder="Upload Image">
+          <label for="">Product Image</label>
+          <input type="file" class="form-control" name="image" required id="" placeholder="Upload Image">
         </div>
 
         <button type="submit" class="btn btn-primary me-2">Submit</button>
