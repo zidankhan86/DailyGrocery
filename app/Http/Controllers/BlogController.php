@@ -37,4 +37,10 @@ class BlogController extends Controller
 
 
     }
+
+    public function  blogTable(){
+
+        $blogs = Blog::all();
+        return view('frontend.pages.blog.blogTable',compact('blogs'));
+    }
 }

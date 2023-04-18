@@ -75,8 +75,7 @@ Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.car
 Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.clear');
 Route::get('/delete/cart/{id}',[AddToCartController::class,'deleteCart'])->name('delete.cart');
 
-Route::get('/blog/form',[BlogController::class,'blogForm'])->name('blog.form');
-Route::post('/blog/post',[BlogController::class,'blogStore'])->name('blog.store');
+
 
 
 });
@@ -100,6 +99,8 @@ Route::post('registration/create',[AuthController::class,'registration_create'])
 Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 //BACKEND ....
+
+
 
 Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
 
@@ -142,6 +143,10 @@ Route::get('/reviews/list',[ProductController::class,'reviews_list'])->name('rev
 Route::get('/notice/list',[NoticeController::class,'notice_list'])->name('notice.list');
 
 Route::get('/profile',[ProfileController::class,'profile'])->name('profile');
+
+Route::get('/blog/form',[BlogController::class,'blogForm'])->name('blog.form');
+Route::post('/blog/post',[BlogController::class,'blogStore'])->name('blog.store');
+Route::get('/blog/table',[BlogController::class,'blogTable'])->name('blog.table');
 
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role

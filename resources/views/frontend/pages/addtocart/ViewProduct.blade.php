@@ -37,24 +37,27 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                   <!-- Image -->
                   <div class="bg-image hover-overlay hover-zoom ripple rounded" data-mdb-ripple-color="light">
                     {{-- <img width="100" height="100" src="{{url ('/uploads/uploads/'.$product->image)}}" --}}
+
+                    Image
                       {{-- class="w-100" /> --}}
                     <a href="#!">
                       <div class="mask" style="background-color: rgba(251, 251, 251, 0.2)"></div>
                     </a>
                   </div>
                   <!-- Image -->
+
                 </div>
 
                 <div class="col-lg-5 col-md-6 mb-4 mb-lg-0">
                   <!-- Data -->
-                  {{-- <p><strong>{{ $product->product_name }}</strong></p> --}}
+                  <p><strong>{{ $product['product_name'] }}</strong></p>
                   <p>Color: red</p>
                   <p>Size: M</p>
 
-                  <button type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
+                  <a  href=""     type="button" class="btn btn-primary btn-sm me-1 mb-2" data-mdb-toggle="tooltip"
                     title="Remove item">
                     <i class="fas fa-trash"></i>
-                  </button>
+                  </a>
                   <button type="button" class="btn btn-danger btn-sm mb-2" data-mdb-toggle="tooltip"
                     title="Move to the wish list">
                     <i class="fas fa-heart"></i>
@@ -158,7 +161,9 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
               <button type="button" class="btn btn-primary btn-lg btn-block">
                 Go to checkout
               </button>
+
               @endif
+
             </div>
           </div>
         </div>

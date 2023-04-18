@@ -99,7 +99,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ route('blog.form') }}">
+        <a class="nav-link" href="{{ route('blog.table') }}">
           <i class="menu-icon mdi mdi-window-close"></i>
           <span class="menu-title">Add Blog</span>
         </a>
