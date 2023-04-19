@@ -8,27 +8,45 @@
       <form class="forms-sample" action="{{route ('customer.store.data') }}" method="post" enctype="multipart/form-data">
         @csrf
 
-        @if($errors->any())
+        {{-- @if($errors->any())
         @foreach($errors->all() as $message)
         <p class="btn btn-danger">{{ $message }}</p>
         @endforeach
-        @endif
+        @endif --}}
 
         <div class="form-group">
           <label for="exampleInputName1">First Name</label>
-          <input type="text" class="form-control" name="first_name" required id="exampleInputName1" placeholder="First Name">
+          <input type="text" class="form-control" name="first_name"  id="exampleInputName1" placeholder="First Name">
+          @error('first_name')
+          <span class="text-danger">{{ $message }}</span>
+          @enderror
         </div>
+
         <div class="form-group">
           <label for="">Last Name</label>
-          <input type="text" class="form-control" name="last_name" required id="" placeholder="Last Name">
+          <input type="text" class="form-control" name="last_name"  id="" placeholder="Last Name">
+
+          @error('last_name')
+          <span class="text-danger">{{ $message }}</span>
+          @enderror
+
         </div>
+
         <div class="form-group">
           <label for="">Phone</label>
-          <input type="tel" class="form-control" name="phone" required id="" placeholder="Phone">
+          <input type="tel" class="form-control" name="phone"  id="" placeholder="Phone">
+          @error('phone')
+          <span class="text-danger">{{ $message }}</span>
+          @enderror
         </div>
         <div class="form-group">
             <label for="exampleInputEmail">E-mail</label>
             <input type="email" class="form-control" name="email" required id="exampleInputEmail" placeholder="E-mail">
+
+            @error('email')
+            <span class="text-danger">{{ $message }}</span>
+            @enderror
+
           </div>
           <div class="form-group">
             <label for="">Image</label>
