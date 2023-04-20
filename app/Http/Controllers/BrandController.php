@@ -57,8 +57,8 @@ class BrandController extends Controller
             'name'=>$request->name,
             'logo'=>$imageName,
         ]);
-        toastr()->success('Brand Added Successfully!!');
-        return redirect()->back();
+        return redirect()->back()
+        ->with('success', 'Brand Created Successfully!');
     }
 
     /**
@@ -114,6 +114,7 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $delete = Brand::find($id);
+        $delete->destroy();
     }
 }
