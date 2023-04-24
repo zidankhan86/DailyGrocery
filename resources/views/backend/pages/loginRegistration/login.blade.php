@@ -38,9 +38,15 @@
                 @csrf
                 <div class="form-group">
                   <input type="email" class="form-control form-control-lg" name="email" id="exampleInputEmail1" placeholder="Username">
+                  @error('email')
+          <p class="text-warning">{{ $message }}</p>
+          @enderror
                 </div>
                 <div class="form-group">
                   <input type="password" class="form-control form-control-lg" name="password" id="exampleInputPassword1" placeholder="Password">
+                  @error('password')
+          <p class="text-warning">{{ $message }}</p>
+          @enderror
                 </div>
                 <button type="submit" class="btn btn-info">SIGN IN</button>
                 <div class="my-2 d-flex justify-content-between align-items-center">
