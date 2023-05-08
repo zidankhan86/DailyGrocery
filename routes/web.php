@@ -164,8 +164,8 @@ Route::resource('/role',RoleController::class);
 Route::resource('/brand',BrandController::class);
 
 //Report
-Route::get('/generate/report',[ReportController::class,'report'])->name('generate.report');
-Route::get('/generate/report/post', [ReportController::class, 'generate'])->name('generate.report.post');
+Route::get('/report',[ReportController::class,'report'])->name('order.report');
+Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
 
 
 });
