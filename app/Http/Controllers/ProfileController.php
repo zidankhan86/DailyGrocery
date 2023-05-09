@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Billing;
 use Illuminate\Http\Request;
 
 class ProfileController extends Controller
@@ -12,8 +13,10 @@ class ProfileController extends Controller
     }
 
     public function customerProfile(){
-        
-        return view('backend.pages.profile.customerProfile');
+
+        $order = Billing::with('UserRelation')->where('user_id',auth()->user()->id)->get();
+
+        return view('backend.pages.profile.customerProfile',compact('order'));
     }
 
 }

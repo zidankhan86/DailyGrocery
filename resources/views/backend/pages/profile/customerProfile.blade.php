@@ -92,6 +92,42 @@
             </div>
           </div>
 
+
+
+          <div class="row gutters-sm">
+
+            <div class="col-sm-12 mb-3">
+                <h3 class="text-center">Order Information</h3>
+                <table class="table table-striped">
+                    <thead>
+                      <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Amount</th>
+                        <th scope="col">Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($order as $key=>$item)
+                        <tr>
+                            <th scope="row">{{ $key+1 }}</th>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->email }}</td>
+                            <td>{{ $item->phone }}</td>
+                            <td>{{ $item->amount }} TK</td>
+                            <td>{{ $item->status }}</td>
+                          </tr>
+                        @endforeach
+                    </tbody>
+                  </table>
+            </div>
+          </div>
+
+
+
+
         </div>
     </div>
 
