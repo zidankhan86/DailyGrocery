@@ -28,15 +28,14 @@ class ProductController extends Controller
         // dd($request->all());
 
         Billing::create([
+            'user_id'=>auth()->user()->id,
+            'product_id'=>$request->product_id,
             'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,
             'date'=>$request->date,
             'address'=>$request->address,
             'road'=>$request->road,
-
-
-
         ]);
         toastr()->success('Thank You For Your Order');
         return redirect()->route('home');

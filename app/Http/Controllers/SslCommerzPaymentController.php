@@ -23,7 +23,7 @@ class SslCommerzPaymentController extends Controller
 
     public function index(Request $request,$id)
     {
-        // dd($request->all());
+         //dd($request->all());
     $product = Products::find($id);  //For specific product data pass through parameter.
 
         # Here you have to receive all the order data to initate the payment.
@@ -39,6 +39,8 @@ class SslCommerzPaymentController extends Controller
         $post_data['cus_name'] = $request->name;        //Name come from Billings
         $post_data['cus_email'] = $request->email;      //email come from Billings
         $post_data['cus_add1'] = $request->address;     //Address come from Billings
+        $post_data['user_id'] = auth()->user()->id;     //User Id Come From Auth USer
+        $post_data['product_id'] = $product->id;       //product id come from product
         $post_data['cus_add2'] = "";
         $post_data['cus_city'] = "";
         $post_data['cus_state'] = "";
@@ -76,6 +78,8 @@ class SslCommerzPaymentController extends Controller
                 'email' => $post_data['cus_email'],
                 'phone' => $post_data['cus_phone'],
                 'amount' => $post_data['total_amount'],
+                'user_id' => $post_data['user_id'],          //For User Post
+                'product_id' => $post_data['product_id'],    //For Product Post
                 'status' => 'Pending',
                 'address' => $post_data['cus_add1'],
                 'transaction_id' => $post_data['tran_id'],

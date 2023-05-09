@@ -36,6 +36,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div>
+                    <input type="hidden" name="user_id">
+                </div>
+                <div>
+                    <input type="hidden" name="product_id">
+                </div>
+
+
                 <div class="row mt-3 mx-4">
                     <div class="col-12">
                         <label class="order-form-label">Enter Phone Number</label>

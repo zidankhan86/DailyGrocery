@@ -36,19 +36,19 @@
         </tr>
         </thead>
         <tbody>
-        @if(isset($orders))
-        @foreach($orders as $key=>$order)
+
+        @foreach($products as $key=>$order)
         <tr>
             <td>{{$key+1}}</td>
-            <td>{{$order->user_id}}</td>
-            <td>{{$order->product_id}}</td>
+            <td>{{$order->id}}</td>
+            <td>{{$order->name}}</td>
             <td>{{$order->receiver_email}}</td>
             <td>{{$order->receiver_name}}</td>
             <td>{{$order->created_at}}</td>
 
         </tr>
         @endforeach
-        @endif
+
         </tbody>
     </table>
 </div>
