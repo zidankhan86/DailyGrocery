@@ -14,7 +14,7 @@ class ProfileController extends Controller
 
     public function customerProfile(){
 
-        $order = Billing::with('UserRelation')->where('user_id',auth()->user()->id)->get();
+        $order = Billing::with('UserRelation','ProductRelation')->where('user_id',auth()->user()->id)->get();
 
         return view('backend.pages.profile.customerProfile',compact('order'));
     }

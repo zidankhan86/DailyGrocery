@@ -129,6 +129,27 @@
 
 
         </div>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+
+              </tr>
+            </thead>
+            <tbody>
+
+                @foreach ($order as $item)
+              <tr>
+                <th scope="row">1</th>
+                <td>{{ $item->ProductRelation->product_name}}</td>
+
+              </tr>
+              @endforeach
+
+
+            </tbody>
+          </table>
     </div>
 
 @endsection
