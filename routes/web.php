@@ -41,14 +41,10 @@ Route::get('/livewire', function () {
 
 
 // SSLCOMMERZ Start
-
-
 Route::post('/pay/{product_id}', [SslCommerzPaymentController::class, 'index'])->name('pay.now');
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
 Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
 Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
-
-
 //SSLCOMMERZ END
 
 
@@ -166,6 +162,9 @@ Route::resource('/brand',BrandController::class);
 //Report
 Route::get('/report',[ReportController::class,'report'])->name('order.report');
 Route::get('/report/search',[ReportController::class,'reportSearch'])->name('order.report.search');
+
+
+
 
 
 });

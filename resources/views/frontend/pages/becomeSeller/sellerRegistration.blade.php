@@ -40,22 +40,40 @@
               <div class="card">
                 <div class="card-body">
                     <h1 style="text-align: center"  class="btn-info" style="text-decoration-style: wavy">DailyGrocery</p>
-                  <h4 class="card-title">Create Account</h4>
+                  <h4 class="card-title">Request For Shop Account</h4>
 
                  <form class="forms-sample" action="{{route('seller.registration.store')}}" method="post">
         @csrf
         <div class="form-group">
           <label for="exampleInputUsername1">Your Name</label>
-          <input type="text" name="name" class="form-control" id="exampleInputUsername1" placeholder="Username">
+          <input type="text" name="name" class="form-control" id="exampleInputUsername1" placeholder="">
         </div>
+
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
-          <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+          <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="">
         </div>
+
         <div class="form-group">
-            <label for="exampleInputConfirmPassword1">Password</label>
-            <input type="password" name="password" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+            <label for="exampleInputPhone">Your Phone</label>
+            <input type="tel" name="phone" class="form-control" id="exampleInputPhone" placeholder="">
           </div>
+
+        <div class="form-group">
+            <label for="exampleInputUsername2">Your Shop Name</label>
+            <input type="text" name="shop_name" class="form-control" id="exampleInputUsername2" placeholder="">
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputAddress">Your Shop Address</label>
+            <input type="text" name="address" class="form-control" id="exampleInputAddress" placeholder="">
+          </div>
+
+          <div>
+            <input type="hidden" name="status">
+          </div>
+
+
         <div class="form-check form-check-flat form-check-primary">
           <label class="form-check-label">
             <input type="checkbox" class="form-check-input">

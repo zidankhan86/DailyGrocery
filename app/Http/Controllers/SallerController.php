@@ -11,22 +11,28 @@ class SallerController extends Controller
 {
     public function sellerRegistrationStore(Request $request){
 
+        //dd($request->all());
+
         $request->validate([
             'name'=>'required|max:120',
             'email'=>'required|email|unique:users',
-            'password'=>'required|min:5',
+
 
         ]);
+
 
         Seller::create([
 
             'name'          =>$request->name,
             'email'         =>$request->email,
-            'password'      =>bcrypt($request->password),
+            'phone'         =>$request->phone,
+            'shop_name'     =>$request->shop_name,
+            'address'       =>$request->address,
+            'status'        =>'pending'
 
         ]);
-        toastr()->success('Account create success');
-        return to_route('login');
+        toastr()->success('Account Request success');
+        return to_route('home');
 
     }
     public function seller_login_process(Request $request){

@@ -26,7 +26,7 @@
                 <a href="{{route ('about.information') }}" class="nav-item nav-link">{{ __('About') }}</a>
                 <a href="{{ route('product.information') }}" class="nav-item nav-link">{{ __('Products') }}</a>
                 <a href="{{route ('contract.information') }}" class="nav-item nav-link">{{ __('Contact') }}</a>
-                <a href="{{route ('become.a.seller') }}" style="color: rgb(255, 127, 127)" class="nav-item nav-link">{{ __('Become a Seller') }}</a>
+                <a href="{{route ('become.a.seller') }}" style="color: rgb(255, 127, 127)" class="nav-item nav-link">{{ __('Seller Request') }}</a>
             </div>
             <div>
 
