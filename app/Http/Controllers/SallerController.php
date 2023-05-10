@@ -48,4 +48,8 @@ class SallerController extends Controller
 
 
     }
+
+    public function sellerList(){
+        return view('backend.pages.seller.sellerList');
+    }
 }

@@ -106,6 +106,8 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
+Route::get('/become/A/seller/list',[SallerController::class,'sellerList'])->name('seller.list');
+
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
 Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');
 Route::post('/shop/store/data',[ShopController::class,'shop_store'])->name('shop.store.data');

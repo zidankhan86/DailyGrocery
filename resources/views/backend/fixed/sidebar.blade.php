@@ -80,12 +80,23 @@
           <span class="menu-title">CUSTOMER REVIEW</span>
         </a>
       </li>
+
+
       <li class="nav-item">
         <a class="nav-link" href="{{route ('reviews.list') }}">
           <i class="menu-icon mdi mdi-coin"></i>
           <span class="menu-title">CUPON</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{route ('seller.list') }}">
+          <i class="menu-icon mdi mdi-coin"></i>
+          <span class="menu-title">Seller Request</span>
+        </a>
+      </li>
+
+
       <li class="nav-item">
         <a class="nav-link" href="{{route ('role.index') }}">
           <i class="menu-icon mdi mdi-account-key"></i>
