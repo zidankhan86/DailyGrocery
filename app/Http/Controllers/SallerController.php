@@ -50,6 +50,7 @@ class SallerController extends Controller
     }
 
     public function sellerList(){
-        return view('backend.pages.seller.sellerList');
+        $sellers = Seller::all();
+        return view('backend.pages.seller.sellerList',compact('sellers'));
     }
 }
