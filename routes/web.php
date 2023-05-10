@@ -107,6 +107,8 @@ Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
 Route::get('/become/A/seller/list',[SallerController::class,'sellerList'])->name('seller.list');
+Route::get('/approve/{id}',[SallerController::class,'approve'])->name('approve');
+Route::get('/reject/{id}',[SallerController::class,'reject'])->name('reject');
 
 Route::get('/shop/form',[ShopController::class,'shop_form'])->name('shop.form');
 Route::get('/shop/list',[ShopController::class,'shop_list'])->name('shop.list');

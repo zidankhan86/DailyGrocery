@@ -23,8 +23,8 @@
             <td>{{ $seller->email }}</td>
             <td>{{ $seller->status }}</td>
             <td>
-                <a href="" class="btn btn-success">Approve</a>
-                <a href="" class="btn btn-danger">Reject</a>
+                <a href="{{route('approve',$seller->id)}}" class="btn btn-success" onclick="return confirm('Do you wants to Approve ?')">Approve</a>
+                <a href="{{route('reject',$seller->id) }}" class="btn btn-danger"  onclick="return confirm('Do you wanst to Reject ?')">Reject</a>
 
             </td>
 

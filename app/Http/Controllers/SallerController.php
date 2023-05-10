@@ -53,4 +53,28 @@ class SallerController extends Controller
         $sellers = Seller::all();
         return view('backend.pages.seller.sellerList',compact('sellers'));
     }
+
+
+
+    public function approve($id){
+
+        $Approve = Seller::findOrFail($id);
+        $Approve->update([
+            "status"=>'Approved'
+        ]);
+        // toastr()->success('Approved');
+        return redirect()->back()->with('success','Approved');
+
+    }
+
+    public function reject($id){
+        $reject = Seller::find($id);
+        $reject->update([
+
+            "status"=>'Rejected'
+
+        ]);
+        // toastr()->success('Rejected');
+        return redirect()->back()->with('Success','Reject');
+    }
 }
