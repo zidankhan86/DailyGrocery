@@ -23,21 +23,23 @@
             <td>{{ $seller->email }}</td>
             <td>{{ $seller->status }}</td>
             <td>
-@if($seller->status== 'Approved')
 
-                <a href="{{route('approve',$seller->id)}}" class="btn btn-success" onclick="return confirm('Do you wants to Approve ?')">Approve</a>
-                <a href="{{route('reject',$seller->id) }}" class="btn btn-danger"  onclick="return confirm('Do you wanst to Reject ?')">Reject</a>
-    @elseif($seller->status == 'Rejected')
+            @if($seller->status == 'Approved')
 
-            <p>Rejected</p>
+               <p>Approved</p>
+
+             @elseif($seller->status == 'Rejected')
+
+               <p>Rejected</p>
 
             @else
+
             <a href="{{route('approve',$seller->id)}}" class="btn btn-success" onclick="return confirm('Do you wants to Approve ?')">Approve</a>
             <a href="{{route('reject',$seller->id) }}" class="btn btn-danger"  onclick="return confirm('Do you wanst to Reject ?')">Reject</a>
 
                 @endif
 
-                
+
             </td>
 
 
@@ -47,10 +49,9 @@
 
 
 
-                {{-- Demo --}}
+                {{-- Demo if elseif else --}}
                 {{-- @if($customer->status=='Accept')
-                    <button>View</button>
-                    <button>Rject</button>
+                    <h4>Accepted</h4>
                 @elseif($customer->status=='Reject')
                     <h4>Rejected</h4>
                 @else
@@ -65,8 +66,7 @@
 
                 {{-- @switch($customer)
                     @case($customer->status=="Accept")
-                        <button>View</button>
-                        <button>Rject</button>
+                        <h4>Accept</h4>
                         @break
                     @case($customer->status=="Reject")
                         <h4>Rejected</h4>
