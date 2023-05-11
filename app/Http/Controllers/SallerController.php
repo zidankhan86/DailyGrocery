@@ -58,7 +58,7 @@ class SallerController extends Controller
 
     public function approve($id){
 
-        $Approve = Seller::findOrFail($id);
+        $Approve = Seller::findOrFail($id); //findorFail()
         $Approve->update([
             "status"=>'Approved'
         ]);
@@ -75,6 +75,6 @@ class SallerController extends Controller
 
         ]);
         // toastr()->success('Rejected');
-        return redirect()->back()->with('Success','Reject');
+        return redirect()->back()->with('success','Rejected');
     }
 }
