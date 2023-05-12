@@ -20,6 +20,7 @@ use App\Http\Controllers\frontend\AddToCartController;
 use App\Http\Controllers\frontend\ContractController;
 use App\Http\Controllers\SslCommerzPaymentController;
 use App\Http\Controllers\frontend\IndexController as FrontendIndexController;
+use App\Http\Controllers\Frontend\InvoiceController;
 use App\Http\Controllers\frontend\ProductController as FrontendProductController;
 use App\Http\Controllers\ReportController;
 use App\Models\Role;
@@ -72,6 +73,8 @@ Route::get('/add/to/cart/{id}',[AddToCartController::class,'AddToCart'])->name('
 Route::get('/view/cart',[AddToCartController::class,'viewCart'])->name('view.cart');
 Route::get('/cart/clear',[AddToCartController::class,'CartClear'])->name('cart.clear');
 Route::get('/delete/cart/{id}',[AddToCartController::class,'deleteCart'])->name('delete.cart');
+
+Route::get('customer/invoice',[InvoiceController::class,'invoice'])->name('customer.invoice');
 
 
 
@@ -155,7 +158,8 @@ Route::put('/blog/update/{id}',[BlogController::class,'blogUpdate'])->name('blog
 
 
 //How to see List of Route for only 7 method // php artisan route:list --name=role
-//how to make 7 method //
+
+//how to make 7 method //php artisan make:controller MyResourceController --resource
 
 //How to use refresh
 //php artisan migrate:refresh --path=database\migrations\2023_03_18_065607_create_billings_table.php
