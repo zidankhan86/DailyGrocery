@@ -25,8 +25,7 @@ class CategoryController extends Controller
 
             'name'=>'required|max:120',
             'details' =>'required',
-            'type'=>'required',
-            'parent_category'=>'required',
+
 
 
         ]);
@@ -34,8 +33,6 @@ class CategoryController extends Controller
             'name'=>$request->name,
             'details' =>$request->details,
             'image'=>$request->image,
-            'type'=>$request->type,
-            'parent_category'=>$request->parent_category
 
         ]);
         toastr()->success('Category Added Successfully!!');
@@ -67,10 +64,7 @@ class CategoryController extends Controller
             'name'=>$request->name,
             'details' =>$request->details,
             'image'=>$request->image,
-            'type'=>$request->type,
-            'parent_category'=>$request->parent_category
-
-        ]);
+ ]);
         toastr()->success('Success!! Category Updated Successfully');
         return redirect()->back();
      }

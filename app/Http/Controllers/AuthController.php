@@ -14,6 +14,13 @@ class AuthController extends Controller
     }
     public function login_process(Request $request){
 
+        $request->validate([
+
+            'email'=>'required',
+            'password'=>'required'
+
+        ]);
+
        // dd($request->all());
     $PorichoyPotro = $request->except('_token');
 
@@ -24,7 +31,7 @@ class AuthController extends Controller
 
             if(auth()->user()->role == 'admin'){
 
-                return redirect()->route('dashboard')->with('message','login successful');
+                return redirect()->route('dashboard')->with('Success','login successful');
             }else{
                 return redirect()->route('home')->with('message','Login done');
             }

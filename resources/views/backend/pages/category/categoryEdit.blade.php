@@ -19,17 +19,7 @@
           <label for="exampleInputPassword4">image</label>
           <input type="file" class="form-control" name="image" value="{{ $categoryData->image }}" id="exampleInputPassword4" placeholder="image">
         </div>
-        <div class="form-group">
-          <label for="exampleSelectGender">Type</label>
-            <select class="form-control" name="type" id="exampleSelectGender" >
-              <option>Goods</option>
-              <option>Meat</option>
-            </select>
-          </div>
-        <div class="form-group">
-          <label for="exampleInputCity1">Parent Category</label>
-          <input type="text" class="form-control" value="{{ $categoryData->parent_category}}" name="parent_category" id="exampleInputCity1" placeholder="Parent Category">
-        </div>
+
         <button type="submit" class="btn btn-primary me-2">Update Change</button>
         <button class="btn btn-light">Cancel</button>
       </form>

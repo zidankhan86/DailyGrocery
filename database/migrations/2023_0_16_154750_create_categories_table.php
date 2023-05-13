@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('name');
             $table->string('details');
             $table->string('image')->nullable();
-            $table->string('type');
-            $table->string('parent_category');
             $table->timestamps();
         });
     }

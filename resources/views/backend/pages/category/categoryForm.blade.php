@@ -35,20 +35,7 @@
           <label for="exampleInputPassword4">image</label>
           <input type="file" class="form-control" name="image" id="exampleInputPassword4" placeholder="image">
         </div>
-        <div class="form-group">
-          <label for="exampleSelectGender">Type</label>
-            <select class="form-control" name="type" id="exampleSelectGender" >
-              <option>Goods</option>
-              <option>Meat</option>
-            </select>
-          </div>
-        <div class="form-group">
-          <label for="exampleInputCity1">Parent Category</label>
-          <input type="text" class="form-control" name="parent_category" id="exampleInputCity1" placeholder="Parent Category">
-          @error('parent_category')
-          <p class="text-success">{{ $message }}</p>
-          @enderror
-        </div>
+
         <button type="submit" class="btn btn-primary me-2">Submit</button>
         <button class="btn btn-light">Cancel</button>
       </form>

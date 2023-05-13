@@ -17,12 +17,7 @@
             <th>
                 Image
             </th>
-            <th>
-                Type
-            </th>
-            <th>
-                Parent Category
-            </th>
+
             <th>
                 Status
               </th>
@@ -45,12 +40,6 @@
             </td>
             <td>
               {{ $category->image  }}
-            </td>
-            <td>
-              {{ $category->type }}
-            </td>
-            <td>
-            {{ $category->parent_category }}
             </td>
 
 
