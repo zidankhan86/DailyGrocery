@@ -24,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/product/get',[ProductController::class,'product']);
 Route::get('/category',[ProductController::class,'category']);
 Route::get('/blog',[ProductController::class,'blog']);
+Route::get('/get/order',[ProductController::class,'order']);
 
 Route::get('/get/brand',[BrandController::class,'brand']);
 
