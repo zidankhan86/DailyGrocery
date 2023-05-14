@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 
@@ -18,7 +19,7 @@ class CustomerController extends Controller
         $customerlist=Customer::paginate(5);
 
 
-        return view('backend.pages.customer.customerList',compact('customerlist'));
+        return view('backend.pages.customer.customerList',compact('customerlist','customerlist'));
 
 
     }
@@ -41,7 +42,7 @@ class CustomerController extends Controller
         }
         //dd($imageName);
 
-
+// where('role'=='customer')->get(); //for 
     Customer::create([
 
         'first_name'=>$request->first_name,
@@ -70,7 +71,7 @@ class CustomerController extends Controller
  return view('backend.pages.customer.customerEdit',compact('customerData'));
 
     }
-    
+
 //Update
 
     public function customer_update(Request $request ,$customer_id){

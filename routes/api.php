@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\api\BrandController;
+use App\Http\Controllers\api\CustomerController;
 use App\Http\Controllers\api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,8 @@ Route::get('/product/get',[ProductController::class,'product']);
 Route::get('/category',[ProductController::class,'category']);
 Route::get('/blog',[ProductController::class,'blog']);
 Route::get('/get/order',[ProductController::class,'order']);
+
+Route::get('/get/customer',[CustomerController::class,'customer']);
 
 Route::get('/get/brand',[BrandController::class,'brand']);
 
