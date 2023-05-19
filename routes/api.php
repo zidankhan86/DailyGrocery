@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\api\BlogController;
 use App\Http\Controllers\api\BrandController;
 use App\Http\Controllers\api\CustomerController;
 use App\Http\Controllers\api\ProductController;
@@ -30,6 +31,8 @@ Route::get('/get/order',[ProductController::class,'order']);
 Route::get('/get/customer',[CustomerController::class,'customer']);
 
 Route::get('/get/brand',[BrandController::class,'brand']);
+
+Route::get('/add/blog',[BlogController::class,'blog']);
 
 
 

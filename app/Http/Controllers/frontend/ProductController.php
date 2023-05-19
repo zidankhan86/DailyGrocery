@@ -37,6 +37,7 @@ class ProductController extends Controller
             'address'=>$request->address,
             'road'=>$request->road,
         ]);
+
         toastr()->success('Thank You For Your Order');
         return redirect()->route('home');
 
