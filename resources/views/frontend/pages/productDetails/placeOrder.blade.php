@@ -18,10 +18,15 @@
                     <div class="col-12">
                         <label class="order-form-label">Name</label>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-12">
                         <div class="form-outline">
                             <input type="text" name="name" id="form1" class="form-control order-form-input" placeholder="Enter Name" />
                         </div>
+                        @error('name')
+
+                        <p class="text-danger">{{ $message }}</p>
+
+                        @enderror
                     </div>
 
                 </div>
@@ -34,6 +39,11 @@
                         <div class="form-outline">
                             <input type="text" name="email" id="form3" class="form-control order-form-input" placeholder="Email" />
                         </div>
+                        @error('email')
+
+                        <p class="text-danger">{{ $message }}</p>
+
+                        @enderror
                     </div>
                 </div>
 
@@ -53,18 +63,13 @@
                         <div class="form-outline">
                             <input type="phone" name="phone" id="form3" class="form-control order-form-input" placeholder="Phone Number" />
                         </div>
-                    </div>
-                </div>
-                <div class="row mt-3 mx-4">
-                    <div class="col-12">
-                        <label class="order-form-label" for="date-picker-example">Date</label>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-outline datepicker" data-mdb-toggle-button="false">
-                            <input name="created_at"
-                            type="datetime-local" class="form-control order-form-input" id="datepicker1" data-mdb-toggle="datepicker" />
-                            <label for="datepicker1" class="form-label">Select a date</label>
-                        </div>
+
+                        @error('phone')
+
+                        <p class="text-danger">{{ $message }}</p>
+
+                        @enderror
+
                     </div>
                 </div>
 
@@ -81,7 +86,7 @@
                     <div class="col-12 mt-2">
                         <div class="form-outline">
                             <input type="text" name="road" id="form6" class="form-control order-form-input" placeholder="Road" />
-                            <label class="form-label" for="form6">Street Address Line 2</label>
+                            <label class="form-label" for="form6">Street Address </label>
                         </div>
                     </div>
 

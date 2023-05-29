@@ -25,6 +25,9 @@ class ProductController extends Controller
 //billing information
 
     public function billingStore(Request $request){
+
+
+       
         // dd($request->all());
 
         Billing::create([
@@ -33,7 +36,6 @@ class ProductController extends Controller
             'name'=>$request->name,
             'email'=>$request->email,
             'phone'=>$request->phone,
-            'date'=>$request->date,
             'address'=>$request->address,
             'road'=>$request->road,
         ]);

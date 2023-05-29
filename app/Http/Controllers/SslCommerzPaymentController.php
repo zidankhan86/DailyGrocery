@@ -23,6 +23,13 @@ class SslCommerzPaymentController extends Controller
 
     public function index(Request $request,$id)
     {
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'address' => 'required',
+
+        ]);
          //dd($request->all());
     $product = Products::find($id);  //For specific product data pass through parameter.
 

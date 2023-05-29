@@ -59,8 +59,7 @@ Route::get('/switch-lang/{lang}',[FrontendIndexController::class,'changeLanguage
 
 Route::get('/product/information',[FrontendProductController::class,'product_information'])->name('product.information');
 Route::get('/product/description/{id}',[FrontendProductController::class,'product_description'])->name('product.description');
-Route::get('/place/order/{product_id}',[ProductController::class,'placeOrder'])->name('place.order');
-Route::post('/billing/information/store',[FrontendProductController::class,'billingStore'])->name('billing.info.store');
+
 
 Route::get('/about/information',[AboutController::class,'about_information'])->name('about.information');
 Route::get('/contract/information',[ContractController::class,'contract_information'])->name('contract.information');
@@ -104,7 +103,12 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
 
-    
+
+    //Frontend Routes
+    Route::get('/place/order/{product_id}',[ProductController::class,'placeOrder'])->name('place.order');
+    Route::post('/billing/information/store',[FrontendProductController::class,'billingStore'])->name('billing.info.store');
+
+
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
