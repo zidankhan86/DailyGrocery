@@ -30,15 +30,18 @@ class AuthController extends Controller
         if(auth()->user()->role=='admin' or 'customer'){
 
             if(auth()->user()->role == 'admin'){
+                toastr()->success('Login Success');
 
-                return redirect()->route('dashboard')->with('Success','login successful');
+                return redirect()->route('dashboard');
             }else{
-                return redirect()->route('home')->with('message','Login done');
+                toastr()->success('Login Success');
+                return redirect()->route('home');
             }
 
     }else{
 
         Auth::logout();
+        toastr()->error('Something is Wrong!');
         return redirect()->back();
         }
     }
@@ -80,6 +83,7 @@ class AuthController extends Controller
     public function logout(){
         Auth::logout();
 
+        toastr()->success('Logout Success');
         return redirect()->route('home');
     }
 

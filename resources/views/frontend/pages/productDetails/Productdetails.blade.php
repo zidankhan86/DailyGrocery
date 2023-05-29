@@ -39,10 +39,10 @@
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <div class="container">
+    <br><br><br><br><div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title"> {{ $product->name }}</h3>
+                <h3 class="card-title">Product: {{ $product->product_name }}</h3>
                 <h6 class="card-subtitle"></h6>
                 <div class="row">
                     <div class="col-lg-5 col-md-5 col-sm-6">
@@ -52,16 +52,17 @@
                         <h4 class="box-title mt-5">Product description</h4>
                         <p>{{ $product->details }}</p>
                         <h2 class="mt-5">
-                        Tour Cost - {{ $product->price }} Tk /Person
+                        Price - {{ $product->price }} Tk /BDT
                         </h2>
 
-                        <a href="{{route ('place.order',$product->id) }}" class="btn btn-primary btn-rounded"> Buy </a>
-                        <h3 class="box-title mt-5">Key Highlights</h3>
-                        <ul class="list-unstyled">
-                            <li><i class="fa fa-check text-success"></i>Whether you're a thrill-seeker</li>
-                            <li><i class="fa fa-check text-success"></i>leaving you with cherished memories</li>
-                            <li><i class="fa fa-check text-success"></i>Travel opens up a world of possibilities</li>
-                        </ul>
+                        <h4 class="box-title mt-5">Shop</h4>
+                        <p>{{ $product->shop_name }}</p>
+
+                        <h4 class="box-title mt-5">Quantity Remain</h4>
+                        <p>{{ $product->quantity }}</p>
+
+                        <a href="{{route ('place.order',$product->id) }}" class="btn btn-info btn-rounded"> Buy Now </a>
+
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12">
                     </div>
