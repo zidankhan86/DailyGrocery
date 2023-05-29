@@ -2,72 +2,73 @@
 @section('content')
 
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
-    <title>Pricing example for Bootstrap</title>
+<style>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/pricing/">
+    body{
+        background-color: #edf1f5;
+        margin-top:20px;
+    }
+    .card {
+        margin-bottom: 30px;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0 solid transparent;
+        border-radius: 0;
+    }
+    .card .card-subtitle {
+        font-weight: 300;
+        margin-bottom: 10px;
+        color: #8898aa;
+    }
+    .table-product.table-striped tbody tr:nth-of-type(odd) {
+        background-color: #f3f8fa!important
+    }
+    .table-product td{
+        border-top: 0px solid #dee2e6 !important;
+        color: #728299!important;
+    }
+    </style>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="pricing.css" rel="stylesheet">
-  </head>
-
-  <body>
-    <br><br><br>
-
-    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
-    </div>
     <div class="container">
-      <div class="card-deck mb-3 text-center">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title"> {{ $product->name }}</h3>
+                <h6 class="card-subtitle"></h6>
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <div class="white-box text-center"><img height="550px" width="350px" src="{{ url('/uploads/uploads/'.$product->image) }}" class="img-responsive"></div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-6">
+                        <h4 class="box-title mt-5">Product description</h4>
+                        <p>{{ $product->details }}</p>
+                        <h2 class="mt-5">
+                        Tour Cost - {{ $product->price }} Tk /Person
+                        </h2>
 
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h4 class="my-0 font-weight-normal">{{ $product->product_name }}</h4>
-          </div>
-          <div class="card-body">
-            <img width="300px" src=" {{ url('/uploads/uploads/'.$product->image) }}" alt="">
-            <h4 class="card-title pricing-card-title">Price :{{ $product->price }}</h4>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Details :{{ $product->details }}</li>
-              <li>Avaiable in stock</li>
-              <li>Priority email support</li>
-
-            </ul>
-            <a href="{{route ('place.order',$product->id) }}" class="btn btn-info">Place Order</a>
-          </div>
+                        <a href="{{route ('place.order',$product->id) }}" class="btn btn-primary btn-rounded"> Buy </a>
+                        <h3 class="box-title mt-5">Key Highlights</h3>
+                        <ul class="list-unstyled">
+                            <li><i class="fa fa-check text-success"></i>Whether you're a thrill-seeker</li>
+                            <li><i class="fa fa-check text-success"></i>leaving you with cherished memories</li>
+                            <li><i class="fa fa-check text-success"></i>Travel opens up a world of possibilities</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                    </div>
+                </div>
+            </div>
         </div>
-
-      </div>
     </div>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="../../assets/js/vendor/popper.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/vendor/holder.min.js"></script>
-    <script>
-      Holder.addTheme('thumb', {
-        bg: '#55595c',
-        fg: '#eceeef',
-        text: 'Thumbnail'
-      });
-    </script>
-  </body>
-</html>
 
 
 @endsection

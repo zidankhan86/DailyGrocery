@@ -78,7 +78,6 @@ Route::get('customer/invoice',[InvoiceController::class,'invoice'])->name('custo
 
 
 
-
 });
 
 
@@ -105,7 +104,7 @@ Route::get('logout',[AuthController::class,'logout'])->name('logout');
 
 Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
 
-
+    
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
 
