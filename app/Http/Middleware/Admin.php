@@ -25,7 +25,7 @@ class Admin
         }
 
 
-        return redirect()->route('dashboard');
+        return redirect()->route('login');
     }
 
 }

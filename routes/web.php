@@ -108,6 +108,8 @@ Route::group(['middleware'=>['auth:web'],'prefix'=>'admin'],function(){
     Route::get('/place/order/{product_id}',[ProductController::class,'placeOrder'])->name('place.order');
     Route::post('/billing/information/store',[FrontendProductController::class,'billingStore'])->name('billing.info.store');
 
+Route::group(['middleware'=>'adminChecker'],function(){
+
 
 Route::get('/',[IndexController::class,'home'])->name('index.template');
 Route::get('/dashboard',[IndexController::class,'dashboard'])->name('dashboard');
@@ -177,8 +179,9 @@ Route::get('/report/search',[ReportController::class,'reportSearch'])->name('ord
 
 
 
-
 });
+});
+
 
 
 
